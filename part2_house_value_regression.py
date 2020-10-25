@@ -3,11 +3,14 @@ import numpy as np
 
 class Regressor():
 
-    def __init__(self, input_size, hidden_size = 5, epoch = 1000, learning_rate = 0.01):
+    def __init__(self, input_size = 9, epoch = 1000, learning_rate = 0.01):
+        # Example init parameters for your model: you can remove them or add new ones
+        # Remenber to set them with a default value for LabTS tests
 
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
+
         return
 
     def _preprocessor(self, x):
@@ -28,7 +31,7 @@ class Regressor():
         #                       ** START OF YOUR CODE **
         #######################################################################
 
-        X = x
+        X = x # Replace this code with you own
         return X
 
 
@@ -50,7 +53,7 @@ class Regressor():
         #                       ** START OF YOUR CODE **
         #######################################################################
 
-        Y = y
+        Y = y # Replace this code with you own
         return Y
 
         
@@ -97,9 +100,8 @@ class Regressor():
         #                       ** START OF YOUR CODE **
         #######################################################################
 
-        # Do not forget to add this line somewhere
-        X = self._preprocessor(x)
-        y = x
+        X = self._preprocessor(x) # Do not forget to add this line somewhere
+        y = x # Replace this code with you own
         return y
 
     def score(self, x, y):
@@ -124,20 +126,20 @@ class Regressor():
         # Do not forget to add these lines somewhere
         X = self._preprocessor(x)
         Y = self._preprocessor_output(y)
-        return 0
+        return 0 # Replace this code with you own
 
 
-# Please alter this file appropriately to work in tandem with your load_regressor function below
-def save_regressor(trained_model):
+def save_regressor(trained_model): # Alter this function appropriately to work in tandem with load_regressor
     """ Save the trained regressor model in part2_model.pt """
+
     with open('part2_model.pt', 'wb') as target:
         torch.save(trained_model, target)
     print("\nSaved model in part2_model.pt\n")
 
 
-# Please alter this section so that it works in tandem with the save_regressor method of your class
-def load_regressor():
+def load_regressor(): # Alter this function so that it works in tandem with save_regressor
     """ Load the trained regressor model in part2_model.pt """
+
     with open('part2_model.pt', 'rb') as target:
         trained_model = torch.load(target)
     print("\nLoaded model in part2_model.pt\n")
@@ -145,16 +147,22 @@ def load_regressor():
 
 
 
-# Ensure to add whatever inputs you deem necessary to this function
-def RegressorHyperParameterSearch():
+def RegressorHyperParameterSearch(): # Ensure to add whatever inputs you deem necessary to this function
     """
-    Performs a hyper-parameter for fine-tuning the regressor.
+    Performs a hyper-parameter for fine-tuning the regressor implemented in the Regressor class.
 
-    Implement a function that performs a hyper-parameter search for your
-    architecture as implemented in the Regressor class. 
+    Parameters
+    ----------
 
+    Returns
+    -------        
     The function should return your optimised hyper-parameters. 
+
     """
+
+    #######################################################################
+    #                       ** START OF YOUR CODE **
+    #######################################################################
 
     return  # Return the chosen hyper parameters
 
