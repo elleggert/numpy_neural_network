@@ -5,8 +5,17 @@ import pandas as pd
 class Regressor():
 
     def __init__(self, input_size = 9, epoch = 1000, learning_rate = 0.01):
-        # Example init parameters for your model: you can remove them or add new ones
+        # You can remove or add any input parameters you need
         # Remenber to set them with a default value for LabTS tests
+        """ 
+        Initialise the model.
+          
+        Arguments:
+            input_size {int} -- input size of the model.
+            epoch {int} -- number of epoch to train the network.
+            learning_rate {float} -- learning rate use to train the model.
+
+        """
 
         #######################################################################
         #                       ** START OF YOUR CODE **
@@ -16,15 +25,15 @@ class Regressor():
 
     def _preprocessor(self, x):
         """ 
-        Preprocess input of the network
+        Preprocess input of the network.
           
-        Parameters
-        ----------
-        x : raw input of the network
+        Arguments:
+            x {np.ndarray or pd.DataFrame or torch.tensor} 
+                -- Raw input array of shape (batch_size, input_size).
 
-        Returns
-        -------        
-        X : preprocessed input
+        Returns:
+            X {torch.tensor} 
+                -- Preprocessed input array of size (batch_size, input_size).
 
         """
 
@@ -38,15 +47,15 @@ class Regressor():
 
     def _preprocessor_output(self, y):
         """ 
-        Preprocess output of the network
+        Preprocess output of the network.
 
-        Parameters
-        ----------
-        y : raw ouput of the network
+        Arguments:
+            y {np.ndarray or pd.DataFrame or torch.tensor} 
+                -- Raw ouput array of shape (batch_size, 1).
 
-        Returns
-        -------        
-        Y : preprocessed output
+        Returns:
+            Y {torch.tensor} 
+                -- Preprocessed output array of size (batch_size, 1).
 
         """
 
@@ -62,14 +71,14 @@ class Regressor():
         """
         Regressor training function
 
-        Parameters
-        ----------
-        x : input data
-        y : corresponding class vector
+        Arguments:
+            x {np.ndarray or pd.DataFrame or torch.tensor} 
+                -- Raw input array of shape (batch_size, input_size).
+            y {np.ndarray or pd.DataFrame or torch.tensor} 
+                -- Raw output array of shape (batch_size, 1).
 
-        Returns
-        -------        
-        self : the trained model
+        Returns:
+            self {Regressor} -- Trained model.
 
         """
 
@@ -87,13 +96,13 @@ class Regressor():
         """
         Ouput the value corresponding to an output x.
 
-        Parameters
-        ----------
-        x : input
+        Arguments:
+            x {np.ndarray or pd.DataFrame or torch.tensor} 
+                -- Raw input array of shape (batch_size, input_size).
 
-        Returns
-        -------        
-        y : the class x is predicted to belong to
+        Returns:
+            y {torch.tensor} 
+                -- Predicted value for the given input (batch_size, 1).
 
         """
 
@@ -109,14 +118,15 @@ class Regressor():
         """
         Function to evaluate the model accuracy on a validation dataset.
 
-        Parameters
-        ----------
-        x : validation data
-        y : validation labels
+        Arguments:
+            x {np.ndarray or pd.DataFrame or torch.tensor} 
+                -- Raw input array of shape (batch_size, input_size).
+            y {np.ndarray or pd.DataFrame or torch.tensor} 
+                -- Raw ouput array of shape (batch_size, 1).
 
-        Returns
-        -------        
-        error : cumulated MSE error between the input of the model and teh actual values
+        Returns:
+            error {float} 
+                -- Quantification of the efficiency of the model.
 
         """
 
@@ -130,7 +140,8 @@ class Regressor():
         return 0 # Replace this code with you own
 
 
-def save_regressor(trained_model): # Alter this function appropriately to work in tandem with load_regressor
+def save_regressor(trained_model): 
+    # Alter this function appropriately to work in tandem with load_regressor
     """ Save the trained regressor model in part2_model.pt """
 
     with open('part2_model.pt', 'wb') as target:
@@ -138,7 +149,8 @@ def save_regressor(trained_model): # Alter this function appropriately to work i
     print("\nSaved model in part2_model.pt\n")
 
 
-def load_regressor(): # Alter this function so that it works in tandem with save_regressor
+def load_regressor(): 
+    # Alter this function so that it works in tandem with save_regressor
     """ Load the trained regressor model in part2_model.pt """
 
     with open('part2_model.pt', 'rb') as target:
@@ -148,16 +160,17 @@ def load_regressor(): # Alter this function so that it works in tandem with save
 
 
 
-def RegressorHyperParameterSearch(): # Ensure to add whatever inputs you deem necessary to this function
+def RegressorHyperParameterSearch(): 
+    # Ensure to add whatever inputs you deem necessary to this function
     """
-    Performs a hyper-parameter for fine-tuning the regressor implemented in the Regressor class.
+    Performs a hyper-parameter for fine-tuning the regressor 
+    implemented in the Regressor class.
 
-    Parameters
-    ----------
-
-    Returns
-    -------        
-    The function should return your optimised hyper-parameters. 
+    Arguments:
+        Add whatever inputs you need.
+        
+    Returns:
+        The function should return your optimised hyper-parameters. 
 
     """
 
@@ -173,13 +186,19 @@ def example_main():
 
     output_label = "median_house_value"
 
-    # As the file contains different types of objects (numerical, text, etc), we use pandas to read it
+    # Use pandas to read CSV data 
+    # as it contains various object types (numerical, text)
+    # Feel free to use another CSV reader tool
     data = pd.read_csv("housing.csv") 
-    split_idx = int(0.8 * len(data))
-    x_train, y_train = data.loc[:, data.columns != output_label].iloc[:split_idx], data[output_label].iloc[:split_idx]
-    x_val, y_val = data.loc[:, data.columns != output_label].iloc[split_idx:], data[output_label].iloc[split_idx:]
 
-    # Train
+    # Split train-val sets
+    split_idx = int(0.8 * len(data))
+    x_train = data.loc[:, data.columns != output_label].iloc[:split_idx]
+    y_train = data[output_label].iloc[:split_idx]
+    x_val = data.loc[:, data.columns != output_label].iloc[split_idx:]
+    y_val = data[output_label].iloc[split_idx:]
+
+    # Training
     regressor = Regressor(input_size = len(x_train.columns), 
                           epoch = 1000, 
                           learning_rate = 0.01)
