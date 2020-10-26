@@ -1,5 +1,6 @@
 import torch
 import numpy as np
+import pandas as pd
 
 class Regressor():
 
@@ -165,4 +166,31 @@ def RegressorHyperParameterSearch(): # Ensure to add whatever inputs you deem ne
     #######################################################################
 
     return  # Return the chosen hyper parameters
+
+
+
+def example_main():
+
+    output_label = "median_house_value"
+
+    # As the file contains different types of objects (numerical, text, etc), we use pandas to read it
+    data = pd.read_csv("housing.csv") 
+    split_idx = int(0.8 * len(data))
+    x_train, y_train = data.loc[:, data.columns != output_label].iloc[:split_idx], data[output_label].iloc[:split_idx]
+    x_val, y_val = data.loc[:, data.columns != output_label].iloc[split_idx:], data[output_label].iloc[split_idx:]
+
+    # Train
+    regressor = Regressor(input_size = len(x_train.columns), 
+                          epoch = 1000, 
+                          learning_rate = 0.01)
+    regressor.fit(x_train, y_train)
+    save_regressor(regressor)
+
+    # Error
+    error = regressor.score(x_val, y_val)
+    print("\nRegressor error: {}\n".format(error))
+
+
+if __name__ == "__main__":
+    example_main()
 
