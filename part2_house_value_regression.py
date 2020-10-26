@@ -1,11 +1,12 @@
 import torch
+import pickle
 import numpy as np
 import pandas as pd
 
 class Regressor():
 
-    def __init__(self, input_size = 9, epoch = 1000, learning_rate = 0.01):
-        # You can remove or add any input parameters you need
+    def __init__(self, input_size, epoch = 1000):
+        # You can add any input parameters you need
         # Remenber to set them with a default value for LabTS tests
         """ 
         Initialise the model.
@@ -13,7 +14,6 @@ class Regressor():
         Arguments:
             input_size {int} -- input size of the model.
             epoch {int} -- number of epoch to train the network.
-            learning_rate {float} -- learning rate use to train the model.
 
         """
 
@@ -21,6 +21,9 @@ class Regressor():
         #                       ** START OF YOUR CODE **
         #######################################################################
 
+        # Replace this code with your own
+        self.input_size = input_size 
+        self.epoch = epoch 
         return
 
     def _preprocessor(self, x):
@@ -41,7 +44,7 @@ class Regressor():
         #                       ** START OF YOUR CODE **
         #######################################################################
 
-        X = x # Replace this code with you own
+        X = x # Replace this code with your own
         return X
 
 
@@ -63,7 +66,7 @@ class Regressor():
         #                       ** START OF YOUR CODE **
         #######################################################################
 
-        Y = y # Replace this code with you own
+        Y = y # Replace this code with your own
         return Y
 
         
@@ -101,7 +104,7 @@ class Regressor():
                 -- Raw input array of shape (batch_size, input_size).
 
         Returns:
-            y {torch.tensor} 
+            y {np.darray} 
                 -- Predicted value for the given input (batch_size, 1).
 
         """
@@ -111,7 +114,7 @@ class Regressor():
         #######################################################################
 
         X = self._preprocessor(x) # Do not forget to add this line somewhere
-        y = x # Replace this code with you own
+        y = x # Replace this code with your own
         return y
 
     def score(self, x, y):
@@ -137,25 +140,25 @@ class Regressor():
         # Do not forget to add these lines somewhere
         X = self._preprocessor(x)
         Y = self._preprocessor_output(y)
-        return 0 # Replace this code with you own
+        return 0 # Replace this code with your own
 
 
 def save_regressor(trained_model): 
     # Alter this function appropriately to work in tandem with load_regressor
-    """ Save the trained regressor model in part2_model.pt """
+    """ Save the trained regressor model in part2_model.pickle """
 
-    with open('part2_model.pt', 'wb') as target:
-        torch.save(trained_model, target)
-    print("\nSaved model in part2_model.pt\n")
+    with open('part2_model.pickle', 'wb') as target:
+        pickle.dump(trained_model, target)
+    print("\nSaved model in part2_model.pickle\n")
 
 
 def load_regressor(): 
     # Alter this function so that it works in tandem with save_regressor
-    """ Load the trained regressor model in part2_model.pt """
+    """ Load the trained regressor model in part2_model.pickle """
 
-    with open('part2_model.pt', 'rb') as target:
-        trained_model = torch.load(target)
-    print("\nLoaded model in part2_model.pt\n")
+    with open('part2_model.pickle', 'rb') as target:
+        trained_model = pickle.load(target)
+    print("\nLoaded model in part2_model.pickle\n")
     return trained_model
 
 
@@ -199,9 +202,7 @@ def example_main():
     y_val = data[output_label].iloc[split_idx:]
 
     # Training
-    regressor = Regressor(input_size = len(x_train.columns), 
-                          epoch = 1000, 
-                          learning_rate = 0.01)
+    regressor = Regressor(len(x_train.columns), epoch = 1000)
     regressor.fit(x_train, y_train)
     save_regressor(regressor)
 
