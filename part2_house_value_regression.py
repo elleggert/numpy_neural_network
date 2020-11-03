@@ -26,6 +26,10 @@ class Regressor():
         self.epoch = epoch 
         return
 
+        #######################################################################
+        #                       ** END OF YOUR CODE **
+        #######################################################################
+
     def _preprocessor(self, x):
         """ 
         Preprocess input of the network.
@@ -46,6 +50,10 @@ class Regressor():
 
         X = x # Replace this code with your own
         return X
+
+        #######################################################################
+        #                       ** END OF YOUR CODE **
+        #######################################################################
 
 
     def _preprocessor_output(self, y):
@@ -68,6 +76,10 @@ class Regressor():
 
         Y = y # Replace this code with your own
         return Y
+
+        #######################################################################
+        #                       ** END OF YOUR CODE **
+        #######################################################################
 
         
     def fit(self, x, y):
@@ -94,6 +106,10 @@ class Regressor():
         Y = self._preprocessor_output(y)
         return self
 
+        #######################################################################
+        #                       ** END OF YOUR CODE **
+        #######################################################################
+
             
     def predict(self, x):
         """
@@ -116,6 +132,10 @@ class Regressor():
         X = self._preprocessor(x) # Do not forget to add this line somewhere
         y = x # Replace this code with your own
         return y
+
+        #######################################################################
+        #                       ** END OF YOUR CODE **
+        #######################################################################
 
     def score(self, x, y):
         """
@@ -141,6 +161,10 @@ class Regressor():
         X = self._preprocessor(x)
         Y = self._preprocessor_output(y)
         return 0 # Replace this code with your own
+
+        #######################################################################
+        #                       ** END OF YOUR CODE **
+        #######################################################################
 
 
 def save_regressor(trained_model): 
@@ -182,6 +206,10 @@ def RegressorHyperParameterSearch():
     #######################################################################
 
     return  # Return the chosen hyper parameters
+
+    #######################################################################
+    #                       ** END OF YOUR CODE **
+    #######################################################################
 
 
 
