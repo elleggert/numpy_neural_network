@@ -30,43 +30,23 @@ class Regressor():
         #                       ** END OF YOUR CODE **
         #######################################################################
 
-    def _preprocessor(self, x):
+    def _preprocessor(self, x, y = None, training = True):
         """ 
         Preprocess input of the network.
           
         Arguments:
-            x {np.ndarray or pd.DataFrame or torch.tensor} 
+            x {pd.DataFrame} 
                 -- Raw input array of shape (batch_size, input_size).
+            y {pd.DataFrame} 
+                -- Raw target array of shape (batch_size, 1).
+            training {boolean} 
+                -- Boolean indicating if we are training or testing the model
 
         Returns:
             X {torch.tensor} 
                 -- Preprocessed input array of size (batch_size, input_size).
-
-        """
-
-        #######################################################################
-        #                       ** START OF YOUR CODE **
-        #######################################################################
-
-        X = x # Replace this code with your own
-        return X
-
-        #######################################################################
-        #                       ** END OF YOUR CODE **
-        #######################################################################
-
-
-    def _preprocessor_output(self, y):
-        """ 
-        Preprocess output of the network.
-
-        Arguments:
-            y {np.ndarray or pd.DataFrame or torch.tensor} 
-                -- Raw ouput array of shape (batch_size, 1).
-
-        Returns:
             Y {torch.tensor} 
-                -- Preprocessed output array of size (batch_size, 1).
+                -- Preprocessed target array of size (batch_size, 1).
 
         """
 
@@ -74,8 +54,10 @@ class Regressor():
         #                       ** START OF YOUR CODE **
         #######################################################################
 
-        Y = y # Replace this code with your own
-        return Y
+        # Replace this code with your own
+        X = x
+        Y = y
+        return X, Y
 
         #######################################################################
         #                       ** END OF YOUR CODE **
@@ -87,9 +69,9 @@ class Regressor():
         Regressor training function
 
         Arguments:
-            x {np.ndarray or pd.DataFrame or torch.tensor} 
+            x {pd.DataFrame} 
                 -- Raw input array of shape (batch_size, input_size).
-            y {np.ndarray or pd.DataFrame or torch.tensor} 
+            y {pd.DataFrame} 
                 -- Raw output array of shape (batch_size, 1).
 
         Returns:
@@ -101,9 +83,7 @@ class Regressor():
         #                       ** START OF YOUR CODE **
         #######################################################################
 
-        # Do not forget to add these lines somewhere
-        X = self._preprocessor(x)
-        Y = self._preprocessor_output(y)
+        X, Y = self._preprocessor(x, y = y, training = True) # Do not forget
         return self
 
         #######################################################################
@@ -116,7 +96,7 @@ class Regressor():
         Ouput the value corresponding to an output x.
 
         Arguments:
-            x {np.ndarray or pd.DataFrame or torch.tensor} 
+            x {pd.DataFrame} 
                 -- Raw input array of shape (batch_size, input_size).
 
         Returns:
@@ -129,9 +109,9 @@ class Regressor():
         #                       ** START OF YOUR CODE **
         #######################################################################
 
-        X = self._preprocessor(x) # Do not forget to add this line somewhere
+        X, _ = self._preprocessor(x, training = False) # Do not forget
         y = x # Replace this code with your own
-        return y
+        return y # Replace this code with your own
 
         #######################################################################
         #                       ** END OF YOUR CODE **
@@ -142,9 +122,9 @@ class Regressor():
         Function to evaluate the model accuracy on a validation dataset.
 
         Arguments:
-            x {np.ndarray or pd.DataFrame or torch.tensor} 
+            x {pd.DataFrame} 
                 -- Raw input array of shape (batch_size, input_size).
-            y {np.ndarray or pd.DataFrame or torch.tensor} 
+            y {pd.DataFrame} 
                 -- Raw ouput array of shape (batch_size, 1).
 
         Returns:
@@ -157,9 +137,7 @@ class Regressor():
         #                       ** START OF YOUR CODE **
         #######################################################################
 
-        # Do not forget to add these lines somewhere
-        X = self._preprocessor(x)
-        Y = self._preprocessor_output(y)
+        X, Y = self._preprocessor(x, y = y, training = False) # Do not forget
         return 0 # Replace this code with your own
 
         #######################################################################
@@ -224,10 +202,10 @@ def example_main():
 
     # Split train-val sets
     split_idx = int(0.8 * len(data))
-    x_train = data.loc[:, data.columns != output_label].iloc[:split_idx]
-    y_train = data[output_label].iloc[:split_idx]
-    x_val = data.loc[:, data.columns != output_label].iloc[split_idx:]
-    y_val = data[output_label].iloc[split_idx:]
+    x_train = data.loc[:split_idx, data.columns != output_label]
+    y_train = data.loc[:split_idx, [output_label]]
+    x_val = data.loc[split_idx:, data.columns != output_label]
+    y_val = data.loc[split_idx:, [output_label]]
 
     # Training
     regressor = Regressor(len(x_train.columns), epoch = 1000)
