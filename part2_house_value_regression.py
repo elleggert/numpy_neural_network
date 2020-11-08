@@ -5,15 +5,15 @@ import pandas as pd
 
 class Regressor():
 
-    def __init__(self, input_size, epoch = 1000):
+    def __init__(self, input_size, nb_epoch = 1000):
         # You can add any input parameters you need
-        # Remenber to set them with a default value for LabTS tests
+        # Remember to set them with a default value for LabTS tests
         """ 
         Initialise the model.
           
         Arguments:
             input_size {int} -- input size of the model.
-            epoch {int} -- number of epoch to train the network.
+            nb_epoch {int} -- number of epoch to train the network.
 
         """
 
@@ -23,14 +23,14 @@ class Regressor():
 
         # Replace this code with your own
         self.input_size = input_size 
-        self.epoch = epoch 
+        self.nb_epoch = nb_epoch 
         return
 
         #######################################################################
         #                       ** END OF YOUR CODE **
         #######################################################################
 
-    def _preprocessor(self, x, y = None, training = True):
+    def _preprocessor(self, x, y = None, training = False):
         """ 
         Preprocess input of the network.
           
@@ -93,7 +93,7 @@ class Regressor():
             
     def predict(self, x):
         """
-        Ouput the value corresponding to an output x.
+        Ouput the value corresponding to an input x.
 
         Arguments:
             x {pd.DataFrame} 
@@ -146,7 +146,7 @@ class Regressor():
 
 
 def save_regressor(trained_model): 
-    # Alter this function appropriately to work in tandem with load_regressor
+    # If you alter this, make sure it works in tandem with load_regressor
     """ Save the trained regressor model in part2_model.pickle """
 
     with open('part2_model.pickle', 'wb') as target:
@@ -155,7 +155,7 @@ def save_regressor(trained_model):
 
 
 def load_regressor(): 
-    # Alter this function so that it works in tandem with save_regressor
+    # If you alter this, make sure it works in tandem with save_regressor
     """ Load the trained regressor model in part2_model.pickle """
 
     with open('part2_model.pickle', 'rb') as target:
@@ -195,25 +195,25 @@ def example_main():
 
     output_label = "median_house_value"
 
-    # Use pandas to read CSV data 
-    # as it contains various object types (numerical, text)
+    # Use pandas to read CSV data as it contains various object types
     # Feel free to use another CSV reader tool
+    # But remember that LabTS tests take Pandas Dataframe as inputs
     data = pd.read_csv("housing.csv") 
 
-    # Split train-val sets
-    split_idx = int(0.8 * len(data))
-    x_train = data.loc[:split_idx, data.columns != output_label]
-    y_train = data.loc[:split_idx, [output_label]]
-    x_val = data.loc[split_idx:, data.columns != output_label]
-    y_val = data.loc[split_idx:, [output_label]]
+    # Spliting input and output
+    x_train = data.loc[:, data.columns != output_label]
+    y_train = data.loc[:, [output_label]]
 
     # Training
-    regressor = Regressor(len(x_train.columns), epoch = 1000)
+    # This example trains on the whole available dataset. 
+    # You probably want to separate some held-out data 
+    # to make sure the model isn't overfitting
+    regressor = Regressor(len(x_train.columns), nb_epoch = 10)
     regressor.fit(x_train, y_train)
     save_regressor(regressor)
 
     # Error
-    error = regressor.score(x_val, y_val)
+    error = regressor.score(x_train, y_train)
     print("\nRegressor error: {}\n".format(error))
 
 
