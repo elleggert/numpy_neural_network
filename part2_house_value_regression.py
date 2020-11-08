@@ -5,14 +5,16 @@ import pandas as pd
 
 class Regressor():
 
-    def __init__(self, input_size, nb_epoch = 1000):
+    def __init__(self, x, nb_epoch = 1000):
         # You can add any input parameters you need
         # Remember to set them with a default value for LabTS tests
         """ 
         Initialise the model.
           
         Arguments:
-            - input_size {int} -- input size of the model.
+            - x {pd.DataFrame} -- Raw input data of shape 
+                (batch_size, input_size), used to compute the size 
+                of the network.
             - nb_epoch {int} -- number of epoch to train the network.
 
         """
@@ -22,7 +24,9 @@ class Regressor():
         #######################################################################
 
         # Replace this code with your own
-        self.input_size = input_size 
+        X, _ = self._preprocessor(x, training = True)
+        self.input_size = X.shape[1]
+        self.output_size = 1
         self.nb_epoch = nb_epoch 
         return
 
@@ -54,7 +58,8 @@ class Regressor():
         #######################################################################
 
         # Replace this code with your own
-        return x, y
+        # Return preprocessed x and y, return None for y if it was None
+        return x, (y if isinstance(y, pd.DataFrame) else None)
 
         #######################################################################
         #                       ** END OF YOUR CODE **
@@ -121,7 +126,7 @@ class Regressor():
             - y {pd.DataFrame} -- Raw ouput array of shape (batch_size, 1).
 
         Returns:
-            error {float} -- Quantification of the efficiency of the model.
+            {float} -- Quantification of the efficiency of the model.
 
         """
 
@@ -202,7 +207,7 @@ def example_main():
     # This example trains on the whole available dataset. 
     # You probably want to separate some held-out data 
     # to make sure the model isn't overfitting
-    regressor = Regressor(len(x_train.columns), nb_epoch = 10)
+    regressor = Regressor(x_train, nb_epoch = 10)
     regressor.fit(x_train, y_train)
     save_regressor(regressor)
 

@@ -424,7 +424,8 @@ class Trainer(object):
         loss_fun,
         shuffle_flag,
     ):
-        """Constructor.
+        """
+        Constructor of the Trainer.
 
         Arguments:
             - network {MultiLayerNetwork} -- MultiLayerNetwork to be trained.
