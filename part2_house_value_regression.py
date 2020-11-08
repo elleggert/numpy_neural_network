@@ -12,8 +12,8 @@ class Regressor():
         Initialise the model.
           
         Arguments:
-            input_size {int} -- input size of the model.
-            nb_epoch {int} -- number of epoch to train the network.
+            - input_size {int} -- input size of the model.
+            - nb_epoch {int} -- number of epoch to train the network.
 
         """
 
@@ -35,18 +35,17 @@ class Regressor():
         Preprocess input of the network.
           
         Arguments:
-            x {pd.DataFrame} 
-                -- Raw input array of shape (batch_size, input_size).
-            y {pd.DataFrame} 
-                -- Raw target array of shape (batch_size, 1).
-            training {boolean} 
-                -- Boolean indicating if we are training or testing the model
+            - x {pd.DataFrame} -- Raw input array of shape 
+                (batch_size, input_size).
+            - y {pd.DataFrame} -- Raw target array of shape (batch_size, 1).
+            - training {boolean} -- Boolean indicating if we are training or 
+                testing the model.
 
         Returns:
-            X {torch.tensor} 
-                -- Preprocessed input array of size (batch_size, input_size).
-            Y {torch.tensor} 
-                -- Preprocessed target array of size (batch_size, 1).
+            - {torch.tensor} -- Preprocessed input array of size 
+                (batch_size, input_size).
+            - {torch.tensor} -- Preprocessed target array of size 
+                (batch_size, 1).
 
         """
 
@@ -55,9 +54,7 @@ class Regressor():
         #######################################################################
 
         # Replace this code with your own
-        X = x
-        Y = y
-        return X, Y
+        return x, y
 
         #######################################################################
         #                       ** END OF YOUR CODE **
@@ -69,10 +66,9 @@ class Regressor():
         Regressor training function
 
         Arguments:
-            x {pd.DataFrame} 
-                -- Raw input array of shape (batch_size, input_size).
-            y {pd.DataFrame} 
-                -- Raw output array of shape (batch_size, 1).
+            - x {pd.DataFrame} -- Raw input array of shape 
+                (batch_size, input_size).
+            - y {pd.DataFrame} -- Raw output array of shape (batch_size, 1).
 
         Returns:
             self {Regressor} -- Trained model.
@@ -96,12 +92,11 @@ class Regressor():
         Ouput the value corresponding to an input x.
 
         Arguments:
-            x {pd.DataFrame} 
-                -- Raw input array of shape (batch_size, input_size).
+            x {pd.DataFrame} -- Raw input array of shape 
+                (batch_size, input_size).
 
         Returns:
-            y {np.darray} 
-                -- Predicted value for the given input (batch_size, 1).
+            {np.darray} -- Predicted value for the given input (batch_size, 1).
 
         """
 
@@ -110,8 +105,7 @@ class Regressor():
         #######################################################################
 
         X, _ = self._preprocessor(x, training = False) # Do not forget
-        y = x # Replace this code with your own
-        return y # Replace this code with your own
+        pass
 
         #######################################################################
         #                       ** END OF YOUR CODE **
@@ -122,14 +116,12 @@ class Regressor():
         Function to evaluate the model accuracy on a validation dataset.
 
         Arguments:
-            x {pd.DataFrame} 
-                -- Raw input array of shape (batch_size, input_size).
-            y {pd.DataFrame} 
-                -- Raw ouput array of shape (batch_size, 1).
+            - x {pd.DataFrame} -- Raw input array of shape 
+                (batch_size, input_size).
+            - y {pd.DataFrame} -- Raw ouput array of shape (batch_size, 1).
 
         Returns:
-            error {float} 
-                -- Quantification of the efficiency of the model.
+            error {float} -- Quantification of the efficiency of the model.
 
         """
 
@@ -146,18 +138,20 @@ class Regressor():
 
 
 def save_regressor(trained_model): 
+    """ 
+    Utility function to save the trained regressor model in part2_model.pickle.
+    """
     # If you alter this, make sure it works in tandem with load_regressor
-    """ Save the trained regressor model in part2_model.pickle """
-
     with open('part2_model.pickle', 'wb') as target:
         pickle.dump(trained_model, target)
     print("\nSaved model in part2_model.pickle\n")
 
 
 def load_regressor(): 
+    """ 
+    Utility function to load the trained regressor model in part2_model.pickle.
+    """
     # If you alter this, make sure it works in tandem with save_regressor
-    """ Load the trained regressor model in part2_model.pickle """
-
     with open('part2_model.pickle', 'rb') as target:
         trained_model = pickle.load(target)
     print("\nLoaded model in part2_model.pickle\n")
@@ -168,8 +162,8 @@ def load_regressor():
 def RegressorHyperParameterSearch(): 
     # Ensure to add whatever inputs you deem necessary to this function
     """
-    Performs a hyper-parameter for fine-tuning the regressor 
-    implemented in the Regressor class.
+    Performs a hyper-parameter for fine-tuning the regressor implemented 
+    in the Regressor class.
 
     Arguments:
         Add whatever inputs you need.

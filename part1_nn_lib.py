@@ -2,9 +2,16 @@ import numpy as np
 import pickle
 
 
-def xavier_init(size, gain=1.0):
+def xavier_init(size, gain = 1.0):
     """
     Xavier initialization of network weights.
+
+    Arguments:
+        - size {tuple} -- size of the network to initialise.
+        - gain {float} -- gain for the Xavier initialisation.
+
+    Returns:
+        {np.ndarray} -- values of the weights.
     """
     low = -gain * np.sqrt(6.0 / np.sum(size))
     high = gain * np.sqrt(6.0 / np.sum(size))
@@ -58,8 +65,8 @@ class MSELossLayer(Layer):
 
 class CrossEntropyLossLayer(Layer):
     """
-    CrossEntropyLossLayer: Computes the softmax followed by the negative log-
-    likelihood loss.
+    CrossEntropyLossLayer: Computes the softmax followed by the negative 
+    log-likelihood loss.
     """
 
     def __init__(self):
@@ -92,9 +99,24 @@ class SigmoidLayer(Layer):
     """
 
     def __init__(self):
+        """ 
+        Constructor of the Sigmoid layer.
+        """
         self._cache_current = None
 
     def forward(self, x):
+        """ 
+        Performs forward pass through the Sigmoid layer.
+
+        Logs information needed to compute gradient at a later stage in
+        `_cache_current`.
+
+        Arguments:
+            x {np.ndarray} -- Input array of shape (batch_size, n_in).
+
+        Returns:
+            {np.ndarray} -- Output array of shape (batch_size, n_out)
+        """
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
@@ -105,6 +127,19 @@ class SigmoidLayer(Layer):
         #######################################################################
 
     def backward(self, grad_z):
+        """
+        Given `grad_z`, the gradient of some scalar (e.g. loss) with respect to
+        the output of this layer, performs back pass through the layer (i.e.
+        computes gradients of loss with respect to parameters of layer and
+        inputs of layer).
+
+        Arguments:
+            grad_z {np.ndarray} -- Gradient array of shape (batch_size, n_out).
+
+        Returns:
+            {np.ndarray} -- Array containing gradient with repect to layer
+                input, of shape (batch_size, n_in).
+        """
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
@@ -121,9 +156,24 @@ class ReluLayer(Layer):
     """
 
     def __init__(self):
+        """
+        Constructor of the Relu layer.
+        """
         self._cache_current = None
 
     def forward(self, x):
+        """ 
+        Performs forward pass through the Relu layer.
+
+        Logs information needed to compute gradient at a later stage in
+        `_cache_current`.
+
+        Arguments:
+            x {np.ndarray} -- Input array of shape (batch_size, n_in).
+
+        Returns:
+            {np.ndarray} -- Output array of shape (batch_size, n_out)
+        """
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
@@ -134,6 +184,19 @@ class ReluLayer(Layer):
         #######################################################################
 
     def backward(self, grad_z):
+        """
+        Given `grad_z`, the gradient of some scalar (e.g. loss) with respect to
+        the output of this layer, performs back pass through the layer (i.e.
+        computes gradients of loss with respect to parameters of layer and
+        inputs of layer).
+
+        Arguments:
+            grad_z {np.ndarray} -- Gradient array of shape (batch_size, n_out).
+
+        Returns:
+            {np.ndarray} -- Array containing gradient with repect to layer
+                input, of shape (batch_size, n_in).
+        """
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
@@ -150,11 +213,12 @@ class LinearLayer(Layer):
     """
 
     def __init__(self, n_in, n_out):
-        """Constructor.
+        """
+        Constructor of the linear layer.
 
         Arguments:
-            n_in {int} -- Number (or dimension) of inputs.
-            n_out {int} -- Number (or dimension) of outputs.
+            - n_in {int} -- Number (or dimension) of inputs.
+            - n_out {int} -- Number (or dimension) of outputs.
         """
         self.n_in = n_in
         self.n_out = n_out
@@ -243,14 +307,17 @@ class MultiLayerNetwork(object):
     """
 
     def __init__(self, input_dim, neurons, activations):
-        """Constructor.
+        """
+        Constructor of the multi layer network.
 
         Arguments:
-            input_dim {int} -- Dimension of input (excluding batch dimension).
-            neurons {list} -- Number of neurons in each layer represented as a
-                list (the length of the list determines the number of layers).
-            activations {list} -- List of the activation function to use for
-                each layer.
+            - input_dim {int} -- Number of features in the input (excluding 
+                the batch dimension).
+            - neurons {list} -- Number of neurons in each linear layer 
+                represented as a list. The length of the list determines the 
+                number of linear layers.
+            - activations {list} -- List of the activation functions to apply 
+                to the output of each linear layer.
         """
         self.input_dim = input_dim
         self.neurons = neurons
@@ -360,13 +427,13 @@ class Trainer(object):
         """Constructor.
 
         Arguments:
-            network {MultiLayerNetwork} -- MultiLayerNetwork to be trained.
-            batch_size {int} -- Training batch size.
-            nb_epoch {int} -- Number of training epochs.
-            learning_rate {float} -- SGD learning rate to be used in training.
-            loss_fun {str} -- Loss function to be used. Possible values: mse,
+            - network {MultiLayerNetwork} -- MultiLayerNetwork to be trained.
+            - batch_size {int} -- Training batch size.
+            - nb_epoch {int} -- Number of training epochs.
+            - learning_rate {float} -- SGD learning rate to be used in training.
+            - loss_fun {str} -- Loss function to be used. Possible values: mse,
                 bce.
-            shuffle_flag {bool} -- If True, training data is shuffled before
+            - shuffle_flag {bool} -- If True, training data is shuffled before
                 training.
         """
         self.network = network
@@ -393,9 +460,11 @@ class Trainer(object):
             - input_dataset {np.ndarray} -- Array of input features, of shape
                 (#_data_points, n_features).
             - target_dataset {np.ndarray} -- Array of corresponding targets, of
-                shape (#_data_points, ).
+                shape (#_data_points, #output_neurons).
 
-        Returns: 2-tuple of np.ndarray: (shuffled inputs, shuffled_targets).
+        Returns: 
+            - {np.ndarray} -- shuffled inputs.
+            - {np.ndarray} -- shuffled_targets.
         """
         #######################################################################
         #                       ** START OF YOUR CODE **
@@ -424,7 +493,7 @@ class Trainer(object):
             - input_dataset {np.ndarray} -- Array of input features, of shape
                 (#_training_data_points, n_features).
             - target_dataset {np.ndarray} -- Array of corresponding targets, of
-                shape (#_training_data_points, ).
+                shape (#_training_data_points, #output_neurons).
         """
         #######################################################################
         #                       ** START OF YOUR CODE **
@@ -443,7 +512,7 @@ class Trainer(object):
             - input_dataset {np.ndarray} -- Array of input features, of shape
                 (#_evaluation_data_points, n_features).
             - target_dataset {np.ndarray} -- Array of corresponding targets, of
-                shape (#_evaluation_data_points, ).
+                shape (#_evaluation_data_points, #output_neurons).
         """
         #######################################################################
         #                       ** START OF YOUR CODE **
@@ -467,7 +536,7 @@ class Preprocessor(object):
         (Does not modify the dataset.)
 
         Arguments:
-            - data {np.ndarray} dataset used to determined the parameters for
+            data {np.ndarray} dataset used to determine the parameters for
             the normalization.
         """
         #######################################################################
@@ -484,7 +553,7 @@ class Preprocessor(object):
         Apply the pre-processing operations to the provided dataset.
 
         Arguments:
-            - data {np.ndarray} dataset to be normalized.
+            data {np.ndarray} dataset to be normalized.
 
         Returns:
             {np.ndarray} normalized dataset.
@@ -503,7 +572,7 @@ class Preprocessor(object):
         Revert the pre-processing operations to retreive the original dataset.
 
         Arguments:
-            - data {np.ndarray} dataset for which to revert normalization.
+            data {np.ndarray} dataset for which to revert normalization.
 
         Returns:
             {np.ndarray} reverted dataset.
