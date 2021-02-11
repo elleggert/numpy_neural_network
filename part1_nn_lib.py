@@ -359,7 +359,7 @@ class MultiLayerNetwork(object):
         Performs backward pass through the network.
 
         Arguments:
-            grad_z {np.ndarray} -- Gradient array of shape (1,
+            grad_z {np.ndarray} -- Gradient array of shape (batch_size,
                 #_neurons_in_final_layer).
 
         Returns:
@@ -459,7 +459,7 @@ class Trainer(object):
 
         Arguments:
             - input_dataset {np.ndarray} -- Array of input features, of shape
-                (#_data_points, n_features).
+                (#_data_points, n_features) or (#_data_points,).
             - target_dataset {np.ndarray} -- Array of corresponding targets, of
                 shape (#_data_points, #output_neurons).
 
@@ -507,7 +507,8 @@ class Trainer(object):
 
     def eval_loss(self, input_dataset, target_dataset):
         """
-        Function that evaluate the loss function for given data.
+        Function that evaluate the loss function for given data. Returns
+        scalar value.
 
         Arguments:
             - input_dataset {np.ndarray} -- Array of input features, of shape
