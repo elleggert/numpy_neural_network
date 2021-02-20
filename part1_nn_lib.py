@@ -209,7 +209,7 @@ class ReluLayer(Layer):
         #######################################################################
         # pass
         output = np.array(grad_z, copy=True) # create a copy of the np array
-        output[self._cache_current <= 0] = 0 #ReLU: 0 for x ≤ 0, x for x > 0, 1 if grad_z > 0
+        output[self._cache_current <= 0] = 0 #ReLU: 0 for x ≤ 0, x for x > 0
         return output
         #######################################################################
         #                       ** END OF YOUR CODE **
@@ -262,7 +262,7 @@ class LinearLayer(Layer):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        
+     
         #Storing weight matrix and inputs X in cache for backprop
         # Bias not stored since its just array of 1s
         self._cache_current = (x, self._W)
@@ -468,7 +468,13 @@ class Trainer(object):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        self._loss_layer = None
+        self._loss_layer = None #pre-written
+
+        if loss_fun == "mse": #Mean Squared Error
+            self._loss_layer = MSELossLayer()
+        elif loss_fun == "bce": #Binary Cross Entropy
+            self._loss_layer = CrossEntropyLossLayer()
+
         #######################################################################
         #                       ** END OF YOUR CODE **
         #######################################################################
