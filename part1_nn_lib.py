@@ -265,7 +265,7 @@ class LinearLayer(Layer):
      
         #Storing weight matrix and inputs X in cache for backprop
         # Bias not stored since its just array of 1s
-        self._cache_current = (x, self._W)
+        self._cache_current = x
 
         #calculating affine transformation in Linear Layer
         return np.matmul(x,self._W) + self._b
