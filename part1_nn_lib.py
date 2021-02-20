@@ -468,7 +468,10 @@ class Trainer(object):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        self._loss_layer = None
+        if loss_fun is "cross_entropy":
+            self._loss_layer = CrossEntropyLossLayer()
+        elif loss_fun is "mse":
+            self._loss_layer = MSELossLayer()
         #######################################################################
         #                       ** END OF YOUR CODE **
         #######################################################################
