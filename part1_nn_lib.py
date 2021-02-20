@@ -495,7 +495,8 @@ class Trainer(object):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        pass
+        random_sequence = np.random.shuffle(np.arange(len(input_dataset)))
+        return input_dataset[random_sequence], target_dataset[random_sequence]
 
         #######################################################################
         #                       ** END OF YOUR CODE **
