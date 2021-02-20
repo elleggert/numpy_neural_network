@@ -121,7 +121,10 @@ class SigmoidLayer(Layer):
         #                       ** START OF YOUR CODE **
         #######################################################################
         # pass
-        output = np.array(x, copy=True)
+        output = np.array(x, copy=True) #copy the np array
+        output = 1.0 / (1 + np.exp(-output)) #Sigmoid activation function
+        self._cache_current = output
+        return output
         #######################################################################
         #                       ** END OF YOUR CODE **
         #######################################################################
@@ -143,8 +146,10 @@ class SigmoidLayer(Layer):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        pass
-
+        # pass
+        
+        output = self._cache_current * (1.0 - self._cache_current) * grad_z
+        return output
         #######################################################################
         #                       ** END OF YOUR CODE **
         #######################################################################
@@ -204,7 +209,7 @@ class ReluLayer(Layer):
         #######################################################################
         # pass
         output = np.array(grad_z, copy=True) # create a copy of the np array
-        output[grad_z < 0] = 0 #ReLU: 0 for x ≤ 0, x for x > 0
+        output[self._cache_current <= 0] = 0 #ReLU: 0 for x ≤ 0, x for x > 0, 1 if grad_z > 0
         return output
         #######################################################################
         #                       ** END OF YOUR CODE **
@@ -230,8 +235,8 @@ class LinearLayer(Layer):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        self._W = None
-        self._b = None
+        self._W = xavier_init((n_in, n_out))
+        self._b = xavier_init((1,n_out))
 
         self._cache_current = None
         self._grad_W_current = None
@@ -257,7 +262,13 @@ class LinearLayer(Layer):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        pass
+        
+        #Storing weight matrix and inputs X in cache for backprop
+        # Bias not stored since its just array of 1s
+        self._cache_current = (x, self._W)
+
+        #calculating affine transformation in Linear Layer
+        return np.matmul(x,self._W) + self._b
 
         #######################################################################
         #                       ** END OF YOUR CODE **
@@ -280,7 +291,10 @@ class LinearLayer(Layer):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        pass
+
+        self._grad_W_current = self._cache_current.T * grad_z
+        self._grad_b_current = np.ones(grad_z.shape[0]) * grad_z
+        return grad_z * self._W.T
 
         #######################################################################
         #                       ** END OF YOUR CODE **
@@ -297,7 +311,10 @@ class LinearLayer(Layer):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        pass
+
+        #One step of gradient descent using the gradients calculated during backprop
+        self._W = self._W - (learning_rate * self._grad_W_current)
+        self._b = self._b - (learning_rate * self._grad_b_current)
 
         #######################################################################
         #                       ** END OF YOUR CODE **
