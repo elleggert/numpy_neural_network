@@ -468,13 +468,11 @@ class Trainer(object):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        self._loss_layer = None #pre-written
-
-        if loss_fun == "mse": #Mean Squared Error
+        self.loss_fun = None #pre-written
+        if loss_fun is "cross_entropy":
+            self._loss_layer = CrossEntropyLossLayer() 
+        elif loss_fun is "mse":
             self._loss_layer = MSELossLayer()
-        elif loss_fun == "bce": #Binary Cross Entropy
-            self._loss_layer = CrossEntropyLossLayer()
-
         #######################################################################
         #                       ** END OF YOUR CODE **
         #######################################################################
