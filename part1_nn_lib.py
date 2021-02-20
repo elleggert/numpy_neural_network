@@ -285,7 +285,10 @@ class LinearLayer(Layer):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        pass
+
+        self._grad_W_current = self._cache_current.T * grad_z
+        self._grad_b_current = ones(grad_z.shape[0]) * grad_z
+        return grad_z * self._W.T
 
         #######################################################################
         #                       ** END OF YOUR CODE **
