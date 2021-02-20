@@ -210,8 +210,8 @@ class ReluLayer(Layer):
         #######################################################################
         # pass
         output = np.array(grad_z, copy=True)
-        output[self._cache_current < 0] = 0 #ReLU: 0 for x ≤ 0, 1 for x > 0
-        output[self._cache_current > 0] = 1 #ReLU: 0 for x ≤ 0, 1 for x > 0
+        output[self._cache_current <= 0] = 0 #ReLU: 0 for x ≤ 0, 1 for x > 0
+        #output[self._cache_current > 0] = 1 #ReLU: 0 for x ≤ 0, 1 for x > 0
         return output
         #######################################################################
         #                       ** END OF YOUR CODE **
@@ -489,10 +489,10 @@ class Trainer(object):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        self.loss_fun = None #pre-written
-        if loss_fun is "cross_entropy":
+        # self.loss_fun = None #pre-written
+        if loss_fun == "cross_entropy":
             self._loss_layer = CrossEntropyLossLayer() 
-        elif loss_fun is "mse":
+        elif loss_fun == "mse":
             self._loss_layer = MSELossLayer()
         #######################################################################
         #                       ** END OF YOUR CODE **
@@ -516,13 +516,14 @@ class Trainer(object):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        random_sequence = np.random.shuffle(np.arange(len(input_dataset)))
-        return input_dataset[random_sequence], target_dataset[random_sequence]
+        sequence = np.arange(input_dataset.shape[0])
+        np.random.shuffle(sequence)
+        return input_dataset[sequence], target_dataset[sequence]
 
         #######################################################################
         #                       ** END OF YOUR CODE **
         #######################################################################
-
+        
     def train(self, input_dataset, target_dataset):
         """
         Main training loop. Performs the following steps `nb_epoch` times:
@@ -546,8 +547,35 @@ class Trainer(object):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        pass
+        
 
+        for _ in range(self.nb_epoch):
+  
+            shuffled_input, shuffled_target = input_dataset, target_dataset
+
+            if self.shuffle_flag is True:
+                # shuffle
+                shuffled_input, shuffled_target = self.shuffle(input_dataset, target_dataset)
+            #split dataset into batches of size batch size
+            batches_input = np.array_split(shuffled_input, (shuffled_input.shape[0] / self.batch_size), axis=0)
+            batches_target = np.array_split(shuffled_target, (shuffled_target.shape[0] / self.batch_size), axis=0)
+
+            for i in range(len(batches_input)):
+                #compute forward pass
+                
+
+                #compute loss
+                loss = self.eval_loss(batches_input[i], batches_target[i])
+                #print(loss)
+                #compute backward pass
+
+                self.network.backward(self._loss_layer.backward())
+                #perform 1 step gradient descent
+
+
+                self.network.update_params(self.learning_rate)
+
+                
         #######################################################################
         #                       ** END OF YOUR CODE **
         #######################################################################
@@ -566,7 +594,9 @@ class Trainer(object):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        pass
+        
+        output_dataset = self.network(input_dataset)
+        return self._loss_layer.forward(output_dataset, target_dataset)
 
         #######################################################################
         #                       ** END OF YOUR CODE **
@@ -596,9 +626,11 @@ class Preprocessor(object):
         #######################################################################
         #                       ** END OF YOUR CODE **
         #######################################################################
+
     def __normalise(self, data):
-        return(data - np.min(data)) / (np.max(data) - np.min(data))
-        
+        for i in range(data.shape[1]):
+            data[:, i] = data[:, i] - np.min(data[:, i]) / (np.max(data[:, i]) - np.min(data[:, i]))
+        return data
 
     def apply(self, data):
         """
@@ -613,7 +645,9 @@ class Preprocessor(object):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        self.data_max = np.max(data)
+        # for i in range(data.shape[1]):
+        #     self.data_max.append(np.max(data[:, i]))
+        
         self.data = self.__normalise(data)
         return self.data
 
@@ -634,8 +668,9 @@ class Preprocessor(object):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        self.data *= self.data_max
-        return self.data
+        # for i in range(data.shape[1]):
+        #     self.data[:, i] *= self.data_max[i]
+        # return self.data
 
         #######################################################################
         #                       ** END OF YOUR CODE **

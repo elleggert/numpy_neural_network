@@ -30,14 +30,13 @@ class TestPreProcessor(unittest.TestCase):
         test = np.array([[0,1,2,3,4,5,6,7,8,9,10],[0,1,2,3,4,5,6,7,8,9,10]])
         prep_input = Preprocessor(test)
         normalised_test = prep_input.apply(test)
-        self.assertEqual(normalised_test.all(), np.array([[0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1],[0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1]]).all())
+        self.assertEqual(normalised_test.all(), \
+            np.array([[0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1],[0,0.1,0.2,0.3,0.4,0.5,0.6,0.7,0.8,0.9,1]]).all())
 
-    def testPreprocessorRevertNormalisationWithTwoDimension(self):
+    def testConditionInBrief(self):
         test = np.array([[0,1,2,3,4,5,6,7,8,9,10],[0,1,2,3,4,5,6,7,8,9,10]])
         prep_input = Preprocessor(test)
-        normalised_test = prep_input.apply(test)
-        un_normalised_test = prep_input.revert(normalised_test)
-        self.assertEqual(un_normalised_test.all(), test.all())
+        self.assertEqual(test.all(), prep_input.revert(prep_input.apply(test)).all())
 
 if __name__ == '__main__':
     unittest.main()
