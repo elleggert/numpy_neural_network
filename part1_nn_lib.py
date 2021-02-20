@@ -293,7 +293,7 @@ class LinearLayer(Layer):
         #######################################################################
 
         self._grad_W_current = self._cache_current.T * grad_z
-        self._grad_b_current = ones(grad_z.shape[0]) * grad_z
+        self._grad_b_current = np.ones(grad_z.shape[0]) * grad_z
         return grad_z * self._W.T
 
         #######################################################################
@@ -568,11 +568,14 @@ class Preprocessor(object):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        pass
+        self.data = data
 
         #######################################################################
         #                       ** END OF YOUR CODE **
         #######################################################################
+    def __normalise(self, data):
+        return(data - np.min(data)) / (np.max(data) - np.min(data))
+        
 
     def apply(self, data):
         """
@@ -587,7 +590,9 @@ class Preprocessor(object):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        pass
+        self.data_max = np.max(data)
+        self.data = self.__normalise(data)
+        return self.data
 
         #######################################################################
         #                       ** END OF YOUR CODE **
@@ -606,7 +611,8 @@ class Preprocessor(object):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        pass
+        self.data *= self.data_max
+        return self.data
 
         #######################################################################
         #                       ** END OF YOUR CODE **
@@ -631,7 +637,7 @@ def example_main():
     y_train = y[:split_idx]
     x_val = x[split_idx:]
     y_val = y[split_idx:]
-
+    
     prep_input = Preprocessor(x_train)
 
     x_train_pre = prep_input.apply(x_train)
