@@ -622,6 +622,7 @@ class Preprocessor(object):
         #                       ** START OF YOUR CODE **
         #######################################################################
         self.data = data
+        self.data_max = []
 
         #######################################################################
         #                       ** END OF YOUR CODE **
@@ -629,7 +630,10 @@ class Preprocessor(object):
 
     def __normalise(self, data):
         for i in range(data.shape[1]):
-            data[:, i] = data[:, i] - np.min(data[:, i]) / (np.max(data[:, i]) - np.min(data[:, i]))
+            if (np.max(data[:, i]) != np.min(data[:, i])):
+                data[:, i] = data[:, i] - np.min(data[:, i]) / (np.max(data[:, i]) - np.min(data[:, i]))
+            else: 
+                data[:, i] = 0.5
         return data
 
     def apply(self, data):
@@ -645,8 +649,8 @@ class Preprocessor(object):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        # for i in range(data.shape[1]):
-        #     self.data_max.append(np.max(data[:, i]))
+        for i in range(data.shape[1]):
+            self.data_max.append(np.max(data[:, i]))
         
         self.data = self.__normalise(data)
         return self.data
@@ -668,9 +672,9 @@ class Preprocessor(object):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        # for i in range(data.shape[1]):
-        #     self.data[:, i] *= self.data_max[i]
-        # return self.data
+        for i in range(data.shape[1]):
+            self.data[:, i] *= self.data_max[i]
+        return self.data
 
         #######################################################################
         #                       ** END OF YOUR CODE **
