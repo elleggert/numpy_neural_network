@@ -149,7 +149,7 @@ class SigmoidLayer(Layer):
         # pass
         
         output = self._cache_current * (1.0 - self._cache_current) * grad_z
-
+        return output
         #######################################################################
         #                       ** END OF YOUR CODE **
         #######################################################################
