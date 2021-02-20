@@ -632,8 +632,8 @@ class Preprocessor(object):
         for i in range(data.shape[1]):
             if (np.max(data[:, i]) != np.min(data[:, i])):
                 data[:, i] = data[:, i] - np.min(data[:, i]) / (np.max(data[:, i]) - np.min(data[:, i]))
-            else: 
-                data[:, i] = 0.5
+
+
         return data
 
     def apply(self, data):
