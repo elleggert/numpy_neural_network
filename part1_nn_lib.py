@@ -209,7 +209,7 @@ class ReluLayer(Layer):
         #######################################################################
         # pass
         output = np.array(grad_z, copy=True) # create a copy of the np array
-        output[grad_z <= 0] = 0 #ReLU: 0 for x ≤ 0, x for x > 0, 1 if grad_z > 0
+        output[self._cache_current <= 0] = 0 #ReLU: 0 for x ≤ 0, x for x > 0, 1 if grad_z > 0
         return output
         #######################################################################
         #                       ** END OF YOUR CODE **
