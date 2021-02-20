@@ -375,7 +375,11 @@ class MultiLayerNetwork(object):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        return np.zeros((1, self.neurons[-1])) # Replace with your own code
+
+        output = x
+        for layer in self._layers:
+            output = layer.forward(output)
+        return output
 
         #######################################################################
         #                       ** END OF YOUR CODE **
