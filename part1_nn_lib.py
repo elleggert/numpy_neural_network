@@ -183,6 +183,7 @@ class ReluLayer(Layer):
         #                       ** START OF YOUR CODE **
         #######################################################################
         # pass
+        self._cache_current = x
         output = np.array(x, copy=True)
         output[output < 0] = 0 #ReLU: 0 for x ≤ 0, x for x > 0
         return output
@@ -208,9 +209,9 @@ class ReluLayer(Layer):
         #                       ** START OF YOUR CODE **
         #######################################################################
         # pass
-        output = np.array(grad_z, copy=True) # create a copy of the np array
-        output[self._cache_current <= 0] = 0 #ReLU: 0 for x ≤ 0, x for x > 0
-        return output
+        grad_z[self._cache_current < 0] = 0 #ReLU: 0 for x ≤ 0, 1 for x > 0
+        grad_z[self._cache_current > 0] = 1 #ReLU: 0 for x ≤ 0, 1 for x > 0
+        return grad_z
         #######################################################################
         #                       ** END OF YOUR CODE **
         #######################################################################
@@ -403,7 +404,11 @@ class MultiLayerNetwork(object):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        pass
+        
+        output = grad_z
+        for layer in reversed(self._layers):
+            output = layer.backward(output)
+        return output
 
         #######################################################################
         #                       ** END OF YOUR CODE **
