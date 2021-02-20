@@ -121,7 +121,10 @@ class SigmoidLayer(Layer):
         #                       ** START OF YOUR CODE **
         #######################################################################
         # pass
-        output = np.array(x, copy=True)
+        output = np.array(x, copy=True) #copy the np array
+        output = 1.0 / (1 + np.exp(-output)) #Sigmoid activation function
+        self._cache_current = output
+        return output
         #######################################################################
         #                       ** END OF YOUR CODE **
         #######################################################################
@@ -143,8 +146,10 @@ class SigmoidLayer(Layer):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        pass
-
+        # pass
+        
+        output = self._cache_current * (1.0 - self._cache_current) * grad_z
+        return output
         #######################################################################
         #                       ** END OF YOUR CODE **
         #######################################################################
@@ -204,7 +209,7 @@ class ReluLayer(Layer):
         #######################################################################
         # pass
         output = np.array(grad_z, copy=True) # create a copy of the np array
-        output[grad_z < 0] = 0 #ReLU: 0 for x ≤ 0, x for x > 0
+        output[self._cache_current <= 0] = 0 #ReLU: 0 for x ≤ 0, x for x > 0, 1 if grad_z > 0
         return output
         #######################################################################
         #                       ** END OF YOUR CODE **
