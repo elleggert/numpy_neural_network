@@ -36,7 +36,7 @@ class Regressor():
         net = MultiLayerNetwork(self.input_size, neurons, activations)
         self.trainer = Trainer(
             network=net,
-            batch_size=100,
+            batch_size=8,
             nb_epoch=nb_epoch,
             learning_rate=0.1,
             loss_fun="mse",
@@ -265,7 +265,7 @@ def example_main():
     # This example trains on the whole available dataset. 
     # You probably want to separate some held-out data 
     # to make sure the model isn't overfitting
-    regressor = Regressor(x_train, nb_epoch = 100)
+    regressor = Regressor(x_train, nb_epoch = 10)
     regressor.fit(x_train, y_train)
     save_regressor(regressor)
 
