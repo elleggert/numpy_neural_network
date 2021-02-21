@@ -2,6 +2,7 @@ import torch
 import pickle
 import numpy as np
 import pandas as pd
+from sklearn import preprocessing
 
 class Regressor():
 
@@ -57,9 +58,41 @@ class Regressor():
         #                       ** START OF YOUR CODE **
         #######################################################################
 
-        # Replace this code with your own
+        x_filled = x.fillna(method='ffill').fillna(method='bfill')
+        print(x_filled.shape)
+
+        if training:
+            self.textual = []
+            self.binarizers = []
+            for col in x_filled.columns.values:
+                if x_filled.dtypes[col] == 'object':
+                    self.textual.append(col)
+                    lb = preprocessing.LabelBinarizer()
+                    lb.fit(x_filled.loc[:, col])
+                    self.binarizers.append(lb)
+
+        for i in range(len(self.textual)):
+            one_hot = self.binarizers[i].transform(x_filled.loc[:, self.textual[i]])
+            x_filled = x_filled.join(pd.DataFrame(one_hot, columns = lb.classes_))
+            x_filled = x_filled.drop(columns = self.textual[i])
+
+        x_np = x_filled.to_numpy()
+
+        if training:
+            self.x_scaler = preprocessing.MinMaxScaler()
+            self.x_scaler.fit_transform(x_np)
+
+        x_np = self.x_scaler.transform(x_np)
+
+        if isinstance(y, pd.DataFrame):
+            y_np = y.to_numpy()
+            if training:
+                self.y_scaler = preprocessing.MinMaxScaler()
+                self.y_scaler.fit_transform(y_np)
+            y_np = self.y_scaler.transform(y_np)
+        
         # Return preprocessed x and y, return None for y if it was None
-        return x, (y if isinstance(y, pd.DataFrame) else None)
+        return x_np, (y_np if isinstance(y, pd.DataFrame) else None)
 
         #######################################################################
         #                       ** END OF YOUR CODE **
@@ -208,6 +241,7 @@ def example_main():
     # You probably want to separate some held-out data 
     # to make sure the model isn't overfitting
     regressor = Regressor(x_train, nb_epoch = 10)
+    exit()
     regressor.fit(x_train, y_train)
     save_regressor(regressor)
 
