@@ -31,8 +31,8 @@ class Regressor():
         self.output_size = 1
         self.nb_epoch = nb_epoch 
 
-        neurons = [16, 3]
-        activations = ["relu", "identity"]
+        neurons = [16, 16, 1]
+        activations = ["relu", "sigmoid", "identity"]
         net = MultiLayerNetwork(self.input_size, neurons, activations)
         self.trainer = Trainer(
             network=net,
