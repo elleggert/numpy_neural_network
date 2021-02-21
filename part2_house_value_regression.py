@@ -3,6 +3,7 @@ import pickle
 import numpy as np
 import pandas as pd
 from sklearn import preprocessing
+from part1_nn_lib import MultiLayerNetwork, Trainer
 
 class Regressor():
 
@@ -29,6 +30,18 @@ class Regressor():
         self.input_size = X.shape[1]
         self.output_size = 1
         self.nb_epoch = nb_epoch 
+
+        neurons = [16, 3]
+        activations = ["relu", "identity"]
+        net = MultiLayerNetwork(self.input_size, neurons, activations)
+        self.trainer = Trainer(
+            network=net,
+            batch_size=8,
+            nb_epoch=nb_epoch,
+            learning_rate=0.01,
+            loss_fun="mse",
+            shuffle_flag=True,
+        )
         return
 
         #######################################################################
@@ -59,7 +72,6 @@ class Regressor():
         #######################################################################
 
         x_filled = x.fillna(method='ffill').fillna(method='bfill')
-        print(x_filled.shape)
 
         if training:
             self.textual = []
@@ -73,7 +85,7 @@ class Regressor():
 
         for i in range(len(self.textual)):
             one_hot = self.binarizers[i].transform(x_filled.loc[:, self.textual[i]])
-            x_filled = x_filled.join(pd.DataFrame(one_hot, columns = lb.classes_))
+            x_filled = x_filled.join(pd.DataFrame(one_hot, columns = self.binarizers[i].classes_))
             x_filled = x_filled.drop(columns = self.textual[i])
 
         x_np = x_filled.to_numpy()
@@ -118,6 +130,8 @@ class Regressor():
         #######################################################################
 
         X, Y = self._preprocessor(x, y = y, training = True) # Do not forget
+
+        self.trainer.train(X ,Y)
         return self
 
         #######################################################################
@@ -143,7 +157,8 @@ class Regressor():
         #######################################################################
 
         X, _ = self._preprocessor(x, training = False) # Do not forget
-        pass
+
+        return self.trainer.perdict(X)
 
         #######################################################################
         #                       ** END OF YOUR CODE **
@@ -168,7 +183,8 @@ class Regressor():
         #######################################################################
 
         X, Y = self._preprocessor(x, y = y, training = False) # Do not forget
-        return 0 # Replace this code with your own
+
+        return self.trainer.eval_loss(X, Y)
 
         #######################################################################
         #                       ** END OF YOUR CODE **
@@ -241,7 +257,6 @@ def example_main():
     # You probably want to separate some held-out data 
     # to make sure the model isn't overfitting
     regressor = Regressor(x_train, nb_epoch = 10)
-    exit()
     regressor.fit(x_train, y_train)
     save_regressor(regressor)
 
