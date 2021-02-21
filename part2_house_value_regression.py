@@ -81,27 +81,36 @@ class Regressor():
                     self.textual.append(col)
                     lb = preprocessing.LabelBinarizer()
                     lb.fit(x_filled.loc[:, col])
-                    self.binarizers.append(lb)
+                    self.binarizers.append(lb.classes_)
 
         for i in range(len(self.textual)):
-            one_hot = self.binarizers[i].transform(x_filled.loc[:, self.textual[i]])
-            x_filled = x_filled.join(pd.DataFrame(one_hot, columns = self.binarizers[i].classes_))
+            lb = preprocessing.LabelBinarizer()
+            lb.classes_ = self.binarizers[i]
+            one_hot = lb.transform(x_filled.loc[:, self.textual[i]])
+            x_filled = x_filled.join(pd.DataFrame(one_hot, columns = self.binarizers[i]))
             x_filled = x_filled.drop(columns = self.textual[i])
 
         x_np = x_filled.to_numpy()
 
         if training:
-            self.x_scaler = preprocessing.MinMaxScaler()
-            self.x_scaler.fit_transform(x_np)
+            scaler = preprocessing.MinMaxScaler()
+            scaler.fit_transform(x_np)
+            self.x_scaler = scaler.scale_, scaler.min_
 
-        x_np = self.x_scaler.transform(x_np)
+        scaler = preprocessing.MinMaxScaler()
+        scaler.scale_, scaler.min_ = self.x_scaler
+        x_np = scaler.transform(x_np)
 
         if isinstance(y, pd.DataFrame):
             y_np = y.to_numpy()
             if training:
-                self.y_scaler = preprocessing.MinMaxScaler()
-                self.y_scaler.fit_transform(y_np)
-            y_np = self.y_scaler.transform(y_np)
+                scaler = preprocessing.MinMaxScaler()
+                scaler.fit_transform(y_np)
+                self.y_scaler = scaler.scale_, scaler.min_
+
+            scaler = preprocessing.MinMaxScaler()
+            scaler.scale_, scaler.min_ = self.y_scaler
+            y_np = scaler.transform(y_np)
         
         # Return preprocessed x and y, return None for y if it was None
         return x_np, (y_np if isinstance(y, pd.DataFrame) else None)
