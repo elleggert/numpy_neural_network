@@ -621,20 +621,14 @@ class Preprocessor(object):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        self.data = data
-        self.data_max = []
+        self.mins = np.amin(data, axis = 0)
+        self.max = np.amax(data, axis = 0)
+        self.range = self.max - self.mins
 
         #######################################################################
         #                       ** END OF YOUR CODE **
         #######################################################################
 
-    def __normalise(self, data):
-        for i in range(data.shape[1]):
-            if (np.max(data[:, i]) != np.min(data[:, i])):
-                data[:, i] = data[:, i] - np.min(data[:, i]) / (np.max(data[:, i]) - np.min(data[:, i]))
-
-
-        return data
 
     def apply(self, data):
         """
@@ -649,11 +643,8 @@ class Preprocessor(object):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        for i in range(data.shape[1]):
-            self.data_max.append(np.max(data[:, i]))
-        
-        self.data = self.__normalise(data)
-        return self.data
+
+        return (data - self.mins) / self.range
 
         #######################################################################
         #                       ** END OF YOUR CODE **
@@ -672,9 +663,8 @@ class Preprocessor(object):
         #######################################################################
         #                       ** START OF YOUR CODE **
         #######################################################################
-        for i in range(data.shape[1]):
-            self.data[:, i] *= self.data_max[i]
-        return self.data
+
+        return (data * self.range) + self.mins
 
         #######################################################################
         #                       ** END OF YOUR CODE **
@@ -701,6 +691,9 @@ def example_main():
     y_val = y[split_idx:]
     
     prep_input = Preprocessor(x_train)
+
+    assert(x_train.all() == prep_input.revert(prep_input.apply(x_train)).all())
+
 
     x_train_pre = prep_input.apply(x_train)
     x_val_pre = prep_input.apply(x_val)
