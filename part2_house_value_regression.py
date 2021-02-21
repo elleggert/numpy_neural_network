@@ -32,7 +32,7 @@ class Regressor():
         self.nb_epoch = nb_epoch 
 
         neurons = [16, 16, 16, 1]
-        activations = ["relu", "relu", "sigmoid", "identity"]
+        activations = ["relu", "relu", "relu", "identity"]
         net = MultiLayerNetwork(self.input_size, neurons, activations)
         self.trainer = Trainer(
             network=net,
@@ -166,8 +166,12 @@ class Regressor():
         #######################################################################
 
         X, _ = self._preprocessor(x, training = False) # Do not forget
+        
+        Y = self.trainer.perdict(X)
+        scaler = preprocessing.MinMaxScaler()
+        scaler.scale_, scaler.min_ = self.y_scaler
 
-        return self.trainer.perdict(X)
+        return scaler.inverse_transform(Y)
 
         #######################################################################
         #                       ** END OF YOUR CODE **
