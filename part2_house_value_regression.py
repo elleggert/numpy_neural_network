@@ -2,7 +2,7 @@ import torch
 import pickle
 import numpy as np
 import pandas as pd
-from sklearn import preprocessing
+from sklearn import preprocessing, metrics
 from part1_nn_lib import MultiLayerNetwork, Trainer
 
 class Regressor():
@@ -167,7 +167,7 @@ class Regressor():
 
         X, _ = self._preprocessor(x, training = False) # Do not forget
         
-        Y = self.trainer.perdict(X)
+        Y = self.trainer.predict(X)
         scaler = preprocessing.MinMaxScaler()
         scaler.scale_, scaler.min_ = self.y_scaler
 
@@ -195,9 +195,15 @@ class Regressor():
         #                       ** START OF YOUR CODE **
         #######################################################################
 
-        X, Y = self._preprocessor(x, y = y, training = False) # Do not forget
+        _, Y = self._preprocessor(x, y = y, training = False) # Y is normalized target data
 
-        return self.trainer.eval_loss(X, Y)
+        scaler = preprocessing.MinMaxScaler()
+        scaler.scale_, scaler.min_ = self.y_scaler
+        Y_real = scaler.inverse_transform(Y) # Y_real is real target data
+
+        Y_pre_real = self.predict(x) # Y_pre_real is real output data
+
+        return metrics.r2_score(Y_real, Y_pre_real)
 
         #######################################################################
         #                       ** END OF YOUR CODE **

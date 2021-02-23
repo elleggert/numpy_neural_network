@@ -602,7 +602,7 @@ class Trainer(object):
         #                       ** END OF YOUR CODE **
         #######################################################################
     
-    def perdict(self, input_dataset):
+    def predict(self, input_dataset):
         return self.network(input_dataset)
 
 
