@@ -94,7 +94,7 @@ class Regressor():
 
         if training:
             scaler = preprocessing.MinMaxScaler()
-            scaler.fit_transform(x_np)
+            scaler.fit(x_np)
             self.x_scaler = scaler.scale_, scaler.min_
 
         scaler = preprocessing.MinMaxScaler()
@@ -105,7 +105,7 @@ class Regressor():
             y_np = y.to_numpy()
             if training:
                 scaler = preprocessing.MinMaxScaler()
-                scaler.fit_transform(y_np)
+                scaler.fit(y_np)
                 self.y_scaler = scaler.scale_, scaler.min_
 
             scaler = preprocessing.MinMaxScaler()
