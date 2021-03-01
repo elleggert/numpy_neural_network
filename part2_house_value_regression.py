@@ -1,4 +1,5 @@
-import torch
+# import torch
+import lhsmdu
 import pickle
 import numpy as np
 import pandas as pd
@@ -199,7 +200,7 @@ class Regressor():
         scaler.scale_, scaler.min_ = self.y_scaler
         Y_real = scaler.inverse_transform(Y) # Y_real is real target data
 
-        Y_pre_real = self.predict(x) # Y_pre_real is real output data
+        Y_pre_real = self.predict(x) # Y_pre_real is real (predicted) output data
 
         return metrics.r2_score(Y_real, Y_pre_real)
 
@@ -229,8 +230,22 @@ def load_regressor():
     return trained_model
 
 
+def train_validate_test_split(x, y, train_percent, validate_percent, seed=None):
+    np.random.seed(seed)
+    perm = np.random.permutation(x.index)
+    m = len(x.index)
+    train_end = int(train_percent * m)
+    validate_end = int(validate_percent * m) + train_end
+    x_train = x.iloc[perm[:train_end]]
+    y_train = y.iloc[perm[:train_end]]
+    x_val = x.iloc[perm[train_end:validate_end]]
+    y_val = y.iloc[perm[train_end:validate_end]]
+    x_test = x.iloc[perm[validate_end:]]
+    y_test = y.iloc[perm[validate_end:]]
+    return x_train, x_val, x_test, y_train, y_val, y_test
 
-def RegressorHyperParameterSearch(): 
+
+def RegressorHyperParameterSearch(x, y, results): 
     # Ensure to add whatever inputs you deem necessary to this function
     """
     Performs a hyper-parameter for fine-tuning the regressor implemented 
@@ -248,8 +263,89 @@ def RegressorHyperParameterSearch():
     #                       ** START OF YOUR CODE **
     #######################################################################
 
-    return  # Return the chosen hyper parameters
 
+    x_train, x_val, x_test, y_train, y_val, y_test = train_validate_test_split(x, y, 0.6, 0.2, 12)
+
+    x_train = x_train.reset_index(drop=True)
+    y_train = y_train.reset_index(drop=True)
+    x_val = x_val.reset_index(drop=True)
+    y_val = y_val.reset_index(drop=True)
+    x_test = x_test.reset_index(drop=True)
+    y_test = y_test.reset_index(drop=True)
+
+    #Batchsize
+    #No epochs
+    #Learning Rate
+    #No of layers
+    #No of neurons p layer
+    #Activations per layer
+
+    # x, nb_epoch = 1000, neurons = [16, 16, 16, 1], activations = ["relu", "relu", "relu", "identity"], batchSize = 8, learningRate = 0.1)
+    # random.choice(neurons), random.choice(activations)
+
+    # Pick a random int between 2 and e.g. 6 --> number of hidden layers:
+    #Create empty lists:
+
+    numLayers = 4
+    
+    for i in range(3, numLayers):
+        print(f"Current Progress: {round((((i-3)/(numLayers-3)) * 100))}%...")
+        for _ in range(1000):
+            sampledNeurons = []
+            sampledActivations = []
+            samples = np.asarray(lhsmdu.sample((i + 3), 3))
+
+            for j in range(i):
+                sampledNeurons.append(round(samples[j][0] * 32))
+                if samples[j][1] < 0.5:
+                    sampledActivations.append("relu")
+                else:
+                    sampledActivations.append("sigmoid")
+
+            sampledActivations.append("identity")
+            sampledNeurons.append(1)
+
+            for epochs in samples[i] * 10:
+                for batchSize in samples[i + 1] * 16:
+                    for learningRate in samples[i + 2] * 0.2:
+                        batchSize = round(batchSize)
+                        epochs = round(epochs)
+                        learningRate = round(learningRate, 4)
+                        model = Regressor(x, epochs, neurons=sampledNeurons, activations = sampledActivations, batchSize=batchSize, learningRate=learningRate)
+                        model.fit(x_train, y_train)
+                        model_error = model.score(x_train, y_train)
+
+                        print(sampledNeurons, sampledActivations, epochs, batchSize, learningRate, "\t\tr2 score = ", model_error)
+                        results.append([sampledNeurons, sampledActivations, epochs, batchSize, learningRate, model_error])
+
+    return  # Return the chosen hyper parameters
+    # #############################################################################
+    # params = {'choice': hp.choice('num_layers',
+    #     [ {'layers':'two', },
+    #     {'layers':'three', 'neuron3': hp.choice('neuron3', [16,32,64,128,256]),
+    #      'activation3':hp.choice('activation3',['sigmoid','relu'])},
+    #      {'layers':'four','neuron4': hp.choice('neuron4', [16,32,64,128,256]),
+    #      'activation4':hp.choice('activation5',['sigmoid','relu']),
+    #      'neuron5': hp.choice('neuron5', [16,32,64,128,256]),
+    #     'activation5':hp.choice('activation4',['sigmoid','relu'])}]),
+    #     'neuron1': hp.choice('neuron1', [16,32,64,128,256]),
+    #     'neuron2': hp.choice('neuron2', [16,32,64,128,256]),
+    #     'activation1':hp.choice('activation1',['sigmoid','relu']),
+    #     'activation2':hp.choice('activation2',['sigmoid','relu']),
+    #     'lr':hp.uniform('lr',1e-4,1e-1),
+    #     'batch_size':hp.choice('batch_size',[8,16,32])}
+    # grid = GridSearchCV(model, params)
+    # start = time.time()
+    # grid.fit(trainData, trainLabels)
+
+    # # evaluate the best grid searched model on the testing data
+    # print("[INFO] grid search took {:.2f} seconds".format(
+    #     time.time() - start))
+    # acc = grid.score(testData, testLabels)
+    # print("[INFO] grid search accuracy: {:.2f}%".format(acc * 100))
+    # print("[INFO] grid search best parameters: {}".format(
+	# grid.best_params_))
+    ################################################################################
     #######################################################################
     #                       ** END OF YOUR CODE **
     #######################################################################
@@ -276,6 +372,19 @@ def example_main():
     regressor = Regressor(x_train, nb_epoch = 10)
     regressor.fit(x_train, y_train)
     save_regressor(regressor)
+
+    results = []
+    RegressorHyperParameterSearch(x_train, y_train, results)
+
+    maxScore = -1
+    bestNetwork = []
+
+    for result in results:
+        if result[-1] > maxScore:
+            maxScore = result[-1]
+            bestNetwork = result[:-1]
+            
+    print("Best network is: ", bestNetwork, "with r2 score: ", maxScore)
 
     # Error
     error = regressor.score(x_train, y_train)
