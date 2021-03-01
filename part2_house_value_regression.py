@@ -7,7 +7,7 @@ from part1_nn_lib import MultiLayerNetwork, Trainer
 
 class Regressor():
 
-    def __init__(self, x, nb_epoch = 1000):
+    def __init__(self, x, nb_epoch = 1000, neurons = [16, 16, 16, 1], activations = ["relu", "relu", "relu", "identity"], batchSize = 8, learningRate = 0.1):
         # You can add any input parameters you need
         # Remember to set them with a default value for LabTS tests
         """ 
@@ -31,14 +31,12 @@ class Regressor():
         self.output_size = 1
         self.nb_epoch = nb_epoch 
 
-        neurons = [16, 16, 16, 1]
-        activations = ["relu", "relu", "relu", "identity"]
         net = MultiLayerNetwork(self.input_size, neurons, activations)
         self.trainer = Trainer(
             network=net,
-            batch_size=8,
+            batch_size=batchSize,
             nb_epoch=nb_epoch,
-            learning_rate=0.1,
+            learning_rate=learningRate,
             loss_fun="mse",
             shuffle_flag=True,
         )
