@@ -245,7 +245,7 @@ def train_validate_test_split(x, y, train_percent, validate_percent, seed=None):
     return x_train, x_val, x_test, y_train, y_val, y_test
 
 
-def RegressorHyperParameterSearch(x, y, results): 
+def RegressorHyperParameterSearch(x, y): 
     # Ensure to add whatever inputs you deem necessary to this function
     """
     Performs a hyper-parameter for fine-tuning the regressor implemented 
@@ -263,6 +263,7 @@ def RegressorHyperParameterSearch(x, y, results):
     #                       ** START OF YOUR CODE **
     #######################################################################
 
+    results = []
 
     x_train, x_val, x_test, y_train, y_val, y_test = train_validate_test_split(x, y, 0.6, 0.2, 12)
 
@@ -270,8 +271,6 @@ def RegressorHyperParameterSearch(x, y, results):
     y_train = y_train.reset_index(drop=True)
     x_val = x_val.reset_index(drop=True)
     y_val = y_val.reset_index(drop=True)
-    x_test = x_test.reset_index(drop=True)
-    y_test = y_test.reset_index(drop=True)
 
     #Batchsize
     #No epochs
@@ -289,14 +288,16 @@ def RegressorHyperParameterSearch(x, y, results):
     numLayers = 4
     
     for i in range(3, numLayers):
-        print(f"Current Progress: {round((((i-3)/(numLayers-3)) * 100))}%...")
-        for _ in range(1000):
+        for _ in range(50):
+            minNeurons = 4
+            maxNeurons = 30
             sampledNeurons = []
             sampledActivations = []
-            samples = np.asarray(lhsmdu.sample((i + 3), 3))
+            samples = np.asarray(lhsmdu.sample((i + 2), 10))
 
             for j in range(i):
-                sampledNeurons.append(round(samples[j][0] * 32))
+                numNeurons = (samples[j][0] * (maxNeurons - minNeurons)) + minNeurons
+                sampledNeurons.append(round(numNeurons))
                 if samples[j][1] < 0.5:
                     sampledActivations.append("relu")
                 else:
@@ -305,20 +306,22 @@ def RegressorHyperParameterSearch(x, y, results):
             sampledActivations.append("identity")
             sampledNeurons.append(1)
 
-            for epochs in samples[i] * 10:
-                for batchSize in samples[i + 1] * 16:
-                    for learningRate in samples[i + 2] * 0.2:
-                        batchSize = round(batchSize)
-                        epochs = round(epochs)
-                        learningRate = round(learningRate, 4)
-                        model = Regressor(x, epochs, neurons=sampledNeurons, activations = sampledActivations, batchSize=batchSize, learningRate=learningRate)
-                        model.fit(x_train, y_train)
-                        model_error = model.score(x_train, y_train)
+            # for epochs in (samples[i] * 13) + 3:
+            #     for batchSize in (samples[i + 1] * 16) + 2:
 
-                        print(sampledNeurons, sampledActivations, epochs, batchSize, learningRate, "\t\tr2 score = ", model_error)
-                        results.append([sampledNeurons, sampledActivations, epochs, batchSize, learningRate, model_error])
+            minLearningRate = 0.001
+            maxLearningRate = 0.2
+            learningRates = (samples[i + 1] * (maxLearningRate - minLearningRate)) + minLearningRate
 
-    return  # Return the chosen hyper parameters
+            for learningRate in learningRates:
+                model = Regressor(x, 10, neurons=sampledNeurons, activations = sampledActivations, batchSize=4, learningRate=learningRate)
+                model.fit(x_train, y_train)
+                model_error = model.score(x_val, y_val)
+
+                print(sampledNeurons, "\t\t", sampledActivations, "\t\t", learningRate, "\t\tR2 score =", model_error)
+                results.append([sampledNeurons, sampledActivations, learningRate, model_error])
+
+    return  results# Return the chosen hyper parameters
     # #############################################################################
     # params = {'choice': hp.choice('num_layers',
     #     [ {'layers':'two', },
@@ -371,24 +374,18 @@ def example_main():
     # to make sure the model isn't overfitting
     regressor = Regressor(x_train, nb_epoch = 10)
     regressor.fit(x_train, y_train)
-    save_regressor(regressor)
+    # save_regressor(regressor)
 
-    results = []
-    RegressorHyperParameterSearch(x_train, y_train, results)
+    results = RegressorHyperParameterSearch(x_train, y_train)
 
-    maxScore = -1
-    bestNetwork = []
-
-    for result in results:
-        if result[-1] > maxScore:
-            maxScore = result[-1]
-            bestNetwork = result[:-1]
+    df = pd.DataFrame(results)
+    df.columns = ['Number of Neurons', 'Activation Functions', 'Learning Rate', 'R2 Score']
+    df.to_csv('neural_network_optimisation.csv')
             
-    print("Best network is: ", bestNetwork, "with r2 score: ", maxScore)
 
     # Error
-    error = regressor.score(x_train, y_train)
-    print("\nRegressor error: {}\n".format(error))
+    # error = regressor.score(x_train, y_train)
+    # print("\nRegressor error: {}\n".format(error))
 
 
 if __name__ == "__main__":
