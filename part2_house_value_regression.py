@@ -285,16 +285,17 @@ def RegressorHyperParameterSearch(x, y):
     # Pick a random int between 2 and e.g. 6 --> number of hidden layers:
     #Create empty lists:
 
-    numLayers = 4
+    numLayers = 6
     
     for i in range(3, numLayers):
-        for _ in range(20):
+        for _ in range(25):
             minNeurons = 4
             maxNeurons = 30
             sampledNeurons = []
             sampledActivations = []
-            samples = np.asarray(lhsmdu.sample((i + 3), 4))
+            samples = np.asarray(lhsmdu.sample((i + 3), 3))
 
+            # generate number of neurons and activation function from distribution
             for j in range(i):
                 numNeurons = (samples[j][0] * (maxNeurons - minNeurons)) + minNeurons
                 sampledNeurons.append(round(numNeurons))
@@ -303,6 +304,7 @@ def RegressorHyperParameterSearch(x, y):
                 else:
                     sampledActivations.append("sigmoid")
 
+            # last layer is always identity with single neuron
             sampledActivations.append("identity")
             sampledNeurons.append(1)
 
