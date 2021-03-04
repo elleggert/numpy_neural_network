@@ -8,7 +8,7 @@ from part1_nn_lib import MultiLayerNetwork, Trainer
 
 class Regressor():
 
-    def __init__(self, x, nb_epoch = 1000, neurons = [16, 16, 16, 1], activations = ["relu", "relu", "relu", "identity"], batchSize = 8, learningRate = 0.1):
+    def __init__(self, x, nb_epoch = 100, neurons = [16, 16, 16, 1], activations = ["relu", "relu", "relu", "identity"], batchSize = 32, learningRate = 0.01):
         # You can add any input parameters you need
         # Remember to set them with a default value for LabTS tests
         """ 
@@ -242,6 +242,12 @@ def train_validate_test_split(x, y, train_percent, validate_percent, seed=None):
     y_val = y.iloc[perm[train_end:validate_end]]
     x_test = x.iloc[perm[validate_end:]]
     y_test = y.iloc[perm[validate_end:]]
+    x_train = x_train.reset_index(drop=True)
+    y_train = y_train.reset_index(drop=True)
+    x_val = x_val.reset_index(drop=True)
+    y_val = y_val.reset_index(drop=True)
+    x_test = x_test.reset_index(drop=True)
+    y_test = y_test.reset_index(drop=True)
     return x_train, x_val, x_test, y_train, y_val, y_test
 
 
@@ -263,76 +269,39 @@ def RegressorHyperParameterSearch(x, y):
     #                       ** START OF YOUR CODE **
     #######################################################################
 
-    results = []
 
     x_train, x_val, x_test, y_train, y_val, y_test = train_validate_test_split(x, y, 0.6, 0.2, 12)
 
-    x_train = x_train.reset_index(drop=True)
-    y_train = y_train.reset_index(drop=True)
-    x_val = x_val.reset_index(drop=True)
-    y_val = y_val.reset_index(drop=True)
-
-    #Batchsize
-    #No epochs
-    #Learning Rate
-    #No of layers
-    #No of neurons p layer
-    #Activations per layer
-
-    # x, nb_epoch = 1000, neurons = [16, 16, 16, 1], activations = ["relu", "relu", "relu", "identity"], batchSize = 8, learningRate = 0.1)
-    # random.choice(neurons), random.choice(activations)
-
-    # Pick a random int between 2 and e.g. 6 --> number of hidden layers:
-    #Create empty lists:
-
-    numLayers = 6
+    numLayers = [4, 8]
+    neurons = [8, 32, 128]
+    activations = ["relu"]
+    epochs = [50, 200, 1000]
+    batchSizes = [8, 16, 32]
+    learningRates = [0.1, 0.01, 0.001]
     
-    for i in range(3, numLayers):
-        for _ in range(25):
-            minNeurons = 4
-            maxNeurons = 30
-            sampledNeurons = []
-            sampledActivations = []
-            samples = np.asarray(lhsmdu.sample((i + 3), 3))
 
-            # generate number of neurons and activation function from distribution
-            for j in range(i):
-                numNeurons = (samples[j][0] * (maxNeurons - minNeurons)) + minNeurons
-                sampledNeurons.append(round(numNeurons))
-                if samples[j][1] < 0.5:
-                    sampledActivations.append("relu")
-                else:
-                    sampledActivations.append("sigmoid")
+    for numLayer in numLayers:
+        for neuron in neurons:
+            neuronsToTest = []
+            for _ in range(numLayer - 1):
+                neuronsToTest.append(neuron)
+            neuronsToTest.append(1) # last neuron value is 1
+            activationsToTest = []
+            for activation in activations:
+                for _ in range(numLayer - 1):
+                    activationsToTest.append(activation)
+                activationsToTest.append("identity") # last activation value is identrity
 
-            # last layer is always identity with single neuron
-            sampledActivations.append("identity")
-            sampledNeurons.append(1)
+                for epoch in epochs:
+                    for batchSize in batchSizes:
+                        for learningRate in learningRates:
+                            model = Regressor(x, epoch, neurons=neuronsToTest, activations = activationsToTest, batchSize=batchSize, learningRate=learningRate)
+                            model.fit(x_train, y_train)
+                            model_error = model.score(x_val, y_val)
+                            print(neuronsToTest, "\t", activationsToTest, "\t", batchSize, "\t", epoch, "\t", learningRate, "\t\tR2 score =", model_error)
 
-            minEpochs = 3
-            maxEpochs = 16
-            epochs = (samples[i] * (maxEpochs - minEpochs) + minEpochs)
-            for epoch in epochs:
-                epoch = round(epoch)
 
-                minBatchSize = 3
-                maxBatchSize = 16
-                batchSizes = (samples[i + 1] * (maxBatchSize - minBatchSize) + minBatchSize)
-                for batchSize in batchSizes:
-                    batchSize = round(batchSize)
-
-                    minLearningRate = 0.001
-                    maxLearningRate = 0.2
-                    learningRates = (samples[i + 2] * (maxLearningRate - minLearningRate)) + minLearningRate
-
-                    for learningRate in learningRates:
-                        model = Regressor(x, epoch, neurons=sampledNeurons, activations = sampledActivations, batchSize=batchSize, learningRate=learningRate)
-                        model.fit(x_train, y_train)
-                        model_error = model.score(x_val, y_val)
-
-                        print(sampledNeurons, "\t", sampledActivations, "\t", batchSize, "\t", epoch, "\t", learningRate, "\t\tR2 score =", model_error)
-                        results.append([sampledNeurons, sampledActivations, batchSize, epoch, learningRate, model_error])
-
-    return  results# Return the chosen hyper parameters
+    return # Return the chosen hyper parameters
     # #############################################################################
     # params = {'choice': hp.choice('num_layers',
     #     [ {'layers':'two', },
@@ -378,25 +347,37 @@ def example_main():
     # Spliting input and output
     x_train = data.loc[:, data.columns != output_label]
     y_train = data.loc[:, [output_label]]
+    
+    x_train, x_val, x_test, y_train, y_val, y_test = train_validate_test_split(x_train, y_train, 0.6, 0.2, 12)
 
     # Training
     # This example trains on the whole available dataset. 
     # You probably want to separate some held-out data 
     # to make sure the model isn't overfitting
-    regressor = Regressor(x_train, nb_epoch = 10)
+    #epochs = 1000
+    #neurons = [16, 32, 128, 32, 1]
+    #activations = ["relu", "relu", "relu", "relu","identity"]
+    #batchSize = 32
+    #learningRate = 0.01
+    regressor = Regressor(x_train)
     regressor.fit(x_train, y_train)
-    # save_regressor(regressor)
+    #save_regressor(regressor)
+
+
+    # Error
+    error = regressor.score(x_test, y_test)
+    print("\nRegressor error: {}\n".format(error))
 
     results = RegressorHyperParameterSearch(x_train, y_train)
 
-    df = pd.DataFrame(results)
-    df.columns = ['Number of Neurons', 'Activation Functions', 'Batch Size', 'Epochs', 'Learning Rate', 'R2 Score']
-    df.to_csv('neural_network_optimisation.csv')
-            
 
-    # Error
-    # error = regressor.score(x_train, y_train)
-    # print("\nRegressor error: {}\n".format(error))
+    # df = pd.DataFrame()
+    # data = pd.read_csv('neural_network_optimisation.csv')
+    # data.loc[len(df)] = [neurons, activations, batchSize, epochs, learningRate, error]
+    # print(data)
+    # data.to_csv('neural_network_optimisation.csv')
+
+    # df.columns = ['Number of Neurons', 'Activation Functions', 'Batch Size', 'Epochs', 'Learning Rate', 'R2 Score']
 
 
 if __name__ == "__main__":

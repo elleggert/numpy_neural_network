@@ -549,7 +549,10 @@ class Trainer(object):
         #######################################################################
         
 
-        for _ in range(self.nb_epoch):
+        for epoch in range(self.nb_epoch):
+
+            # if epoch % 100 == 0:
+            #     print("Epoch:", epoch)
   
             shuffled_input, shuffled_target = input_dataset, target_dataset
 
@@ -591,7 +594,7 @@ class Trainer(object):
             - target_dataset {np.ndarray} -- Array of corresponding targets, of
                 shape (#_evaluation_data_points, #output_neurons).
         """
-        #######################################################################
+        #######################################################################                     
         #                       ** START OF YOUR CODE **
         #######################################################################
         
