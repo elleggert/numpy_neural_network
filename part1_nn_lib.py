@@ -551,8 +551,7 @@ class Trainer(object):
 
         for epoch in range(self.nb_epoch):
 
-            # if epoch % 100 == 0:
-            #     print("Epoch:", epoch)
+            loss_per_epoch = 0
   
             shuffled_input, shuffled_target = input_dataset, target_dataset
 
@@ -569,7 +568,7 @@ class Trainer(object):
 
                 #compute loss
                 loss = self.eval_loss(batches_input[i], batches_target[i])
-                #print(loss)
+                loss_per_epoch += loss
                 #compute backward pass
 
                 self.network.backward(self._loss_layer.backward())
@@ -578,7 +577,8 @@ class Trainer(object):
 
                 self.network.update_params(self.learning_rate)
 
-                
+            if epoch % 10 == 0:
+                print("Epoch:", epoch, "Loss:", loss_per_epoch)  
         #######################################################################
         #                       ** END OF YOUR CODE **
         #######################################################################
