@@ -364,19 +364,19 @@ def example_main():
 
     
     epochs = 1000
-    neurons = [128, 128, 128, 128, 128, 128, 128, 1]
-    activations = ["relu", "relu", "relu", "relu","relu", "relu", "relu", "identity"]
-    batchSize = 32
+    neurons = [128, 128, 128, 128, 128, 128, 128, 128, 1]
+    activations = ["relu", "relu", "relu", "relu","relu", "relu", "relu", "relu", "identity"]
+    batchSize = 16
     learningRate = 0.01
     regressor = Regressor(x_train, epochs, neurons, activations, batchSize, learningRate)
     regressor.fit(x_train, y_train)
-    #save_regressor(regressor)
-
+    save_regressor(regressor)
     # Error
     error = regressor.score(x_test, y_test)
     print("\nRegressor error: {}\n".format(error))
 
     add_to_csv([neurons, activations, batchSize, epochs, learningRate, error])
+    exit()
 
     results = RegressorHyperParameterSearch(x_train, y_train)
 

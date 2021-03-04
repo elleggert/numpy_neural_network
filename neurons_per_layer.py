@@ -32,10 +32,10 @@ x = list(map(lambda x: round(float(x),4),x))
 plt.scatter(y,z, marker='o', label= "sigmoid")
 plt.scatter(q,x, marker='x', label= "relu")
 
-plt.title('Data from the CSV File')
+plt.title('R2 Score for Different Numbers of Neurons per Layer')
 
 plt.ylabel('R2')
-plt.xlabel('Neurons per Layers')
-plt.legend()
+plt.xlabel('Neurons per Layer')
+plt.legend(loc = 'upper center')
 
 plt.show()

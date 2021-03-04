@@ -32,13 +32,13 @@ q = list(map(lambda x: round(float(x),4),q))
 z = list(map(lambda x: round(float(x),4),z))
 x = list(map(lambda x: round(float(x),4),x))
 
-plt.scatter(y,z, marker='o', label= "sigmoid")
-plt.scatter(q,x, marker='x', label= "relu")
+plt.scatter(y,z, marker='o', label= "Sigmoid")
+plt.scatter(q,x, marker='x', label= "ReLU")
 
-plt.title('Data from the CSV File')
+plt.title('Generalised Architecture Complexity against R2 Score')
 
 plt.ylabel('R2')
-plt.xlabel('Total Number of Neurons')
+plt.xlabel('Network Complexity Score')
 plt.legend()
 
 plt.show()
