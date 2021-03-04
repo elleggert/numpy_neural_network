@@ -274,12 +274,12 @@ def RegressorHyperParameterSearch(x, y):
 
     x_train, x_val, x_test, y_train, y_val, y_test = train_validate_test_split(x, y, 0.6, 0.2, 12)
 
-    numLayers = [16]
-    neurons = [8, 32, 128]
-    activations = ["sigmoid"]
-    epochs = [50, 200, 1000]
-    batchSizes = [8, 16, 32]
-    learningRates = [0.1, 0.01, 0.001]
+    numLayers = [7]
+    neurons = [8]
+    activations = ["relu"]
+    epochs = [500, 1500]
+    batchSizes = [8]
+    learningRates = [0.1]
     
 
     for numLayer in numLayers:
@@ -358,16 +358,16 @@ def example_main():
     x_train, x_val, x_test, y_train, y_val, y_test = train_validate_test_split(x_train, y_train, 0.6, 0.2, 12)
 
     # Training
-    # This example trains on the whole available dataset. 
+    # This example trains on the whole available dataset. ç
     # You probably want to separate some held-out data 
     # to make sure the model isn't overfitting
 
     
-    epochs = 1000
-    neurons = [128, 128, 128, 128, 128, 128, 128, 1]
+    epochs = 2000
+    neurons = [16,16,32, 16,32, 8, 8, 1]
     activations = ["relu", "relu", "relu", "relu","relu", "relu", "relu", "identity"]
     batchSize = 32
-    learningRate = 0.01
+    learningRate = 0.1
     regressor = Regressor(x_train, epochs, neurons, activations, batchSize, learningRate)
     regressor.fit(x_train, y_train)
     #save_regressor(regressor)
@@ -376,9 +376,9 @@ def example_main():
     error = regressor.score(x_test, y_test)
     print("\nRegressor error: {}\n".format(error))
 
-    add_to_csv([neurons, activations, batchSize, epochs, learningRate, error])
+    #add_to_csv([neurons, activations, batchSize, epochs, learningRate, error])
 
-    results = RegressorHyperParameterSearch(x_train, y_train)
+    #results = RegressorHyperParameterSearch(x_train, y_train)
 
 
 if __name__ == "__main__":
