@@ -363,9 +363,9 @@ def example_main():
     # to make sure the model isn't overfitting
 
     
-    epochs = 100
-    neurons = [16, 32, 128, 32, 1]
-    activations = ["relu", "relu", "relu", "relu","identity"]
+    epochs = 1000
+    neurons = [128, 128, 128, 128, 128, 128, 128, 1]
+    activations = ["relu", "relu", "relu", "relu","relu", "relu", "relu", "identity"]
     batchSize = 32
     learningRate = 0.01
     regressor = Regressor(x_train, epochs, neurons, activations, batchSize, learningRate)

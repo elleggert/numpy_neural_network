@@ -261,3 +261,294 @@ Neurons,Activations,Batch Size, Epochs, Learning Rate, R2 Error
 "[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.01,-0.0032557676263829105
 "[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,200,0.01,0.7052581013644966
 "[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,1000,0.1,0.7437321690075519
+"[128, 128, 128, 1]","['relu', 'relu', 'relu', 'identity']",8,1000,0.001,0.70319470300742
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.001,-0.0005885294837968402
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,200,0.001,0.6440595444645892
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.1,-0.0006264874919057473
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.1,-0.0006964712538199969
+"[128, 128, 128, 1]","['relu', 'relu', 'relu', 'identity']",16,1000,0.1,0.7461706496964828
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.01,-0.0015796336509366071
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.001,-0.00038573848747058825
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.1,-3.9843208803569397e-05
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.01,-0.0011808864831928112
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.01,-0.002006258474793965
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.001,-5.434879126053893e-05
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.1,-0.07755770135601403
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.01,-0.019884793459630012
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.001,-0.0006820619504952496
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.1,-0.028249860745463984
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.01,-0.00018378288514520058
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.001,-0.00031273914060614416
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.1,-0.0009158308340591059
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.01,-0.009543824180710647
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.001,-8.178633744448938e-05
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.1,-0.037708712417991785
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.01,-0.01706497240810667
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.001,-0.00357398373145168
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.1,-0.0029060826991984534
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.01,-0.0019342742902033194
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.001,-9.948046605146033e-06
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.001,-0.00046304408191044644
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.1,-0.0021713285349198586
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.01,-0.0010707034480279543
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.001,-2.070865477321604e-06
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.1,-0.03307664346020567
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.1,-0.02514542065436176
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.01,-0.004213571642421421
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.01,-0.0030272382736598047
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.001,-0.00015628204558404413
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.1,-0.0017112389985280974
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.01,-1.1382643357427114e-05
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.001,-8.660190576437188e-06
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.001,-0.00027421619268741537
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.1,-0.005745155284533121
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.01,-0.00018649306346785188
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.1,-7.165099259132113e-05
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.001,-0.00012167777664107149
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.1,-2.5050563576822782e-05
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.01,-0.006366048856057294
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.001,-0.0004911732233252586
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.1,-0.01107130070593576
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.01,-0.006800335964589177
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.001,-0.00032117807746212534
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.01,-0.0017050709948744913
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.1,-6.872953334524645e-05
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.01,-9.298630879794878e-05
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.001,-0.0033821872139898623
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.001,-8.056133677047939e-05
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.1,-0.000802509821973052
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.1,-0.00747336954644795
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.01,-0.0001673472607139903
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.01,-0.027437368419696684
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.001,-0.0013552273429267014
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.001,-0.00046578370023775406
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.1,-0.00039289042636636573
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.1,-0.003368423799158027
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.01,-0.014842773049215996
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.01,-0.007814926915037823
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.001,-8.086989699007674e-06
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.001,-0.0029816547172125674
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.1,-0.013594142236150963
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.01,-0.0049695202312092235
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.001,-0.0010073468879308045
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.1,-0.0075392167876775495
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.01,-0.0334394961119302
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.001,-0.006273791047839872
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.1,-0.000847775688371577
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.01,-0.01779503531779425
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.1,-0.006842710751314041
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.001,-0.009609067707422092
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.1,-0.005335544276304782
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.01,-0.0012732679486668896
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.001,-0.002811870747120304
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.01,-0.018700913919987183
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.1,-0.002029428948930878
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.01,-9.389374650070614e-05
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.001,-0.0016720161426695412
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.001,-1.965286195115823e-05
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.1,-2.2154855644718197e-05
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.1,-0.0074955770679823175
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.01,-0.005933754834045457
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.001,-0.00026117884505016953
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.1,0.6178401967427134
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.01,0.3213274870521189
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.001,0.01980070065199324
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.1,0.6168922543179596
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.01,0.12901895416123976
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.001,-2.0159594137592052e-05
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.1,0.6022925542219651
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.01,0.05768199700134269
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.001,-0.010048547389167828
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.1,0.6684827379379501
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.01,0.6090092309447498
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.001,0.03191994309405888
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.1,0.6402372717534653
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.01,0.46860971663060125
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.001,0.030824380737373924
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.1,0.6233707054338802
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.01,0.1413340982532414
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.001,-0.004349016715121001
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.1,0.7073431305730126
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.01,0.6353113230385543
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.001,0.5551928686296286
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.1,0.698079582434462
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.01,0.6201113536172348
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.001,0.17757156209248692
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.1,0.6579901681393356
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.01,0.6129384223328067
+"[8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.001,0.05368156210233621
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.1,0.5931049587428012
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.01,0.31874300808235967
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.001,0.007322874021133852
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.1,0.5253948827866444
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.01,0.2535703146760945
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.001,0.014254246043455487
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.1,0.3759757757043636
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.01,0.023682632220056177
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.001,0.014388774712527641
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.1,0.6273677777720101
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.01,0.5987751160627066
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.001,0.09976078804951505
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.1,0.626518121285849
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.01,0.5964797572849491
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.001,0.08027672419474441
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.1,0.6019391931686833
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.01,0.3910861586340638
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.001,0.006742514041656822
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.1,0.6994729253201835
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.01,0.6260788782858567
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.001,0.5782680819467283
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.1,0.6748171461726714
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.01,0.6177790501816275
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.001,0.3784466713556571
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.1,0.661351982460395
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.01,0.6063889027685277
+"[32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.001,0.19981098774357176
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.1,-0.04687564300526592
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.01,0.32532153061330826
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.001,0.03629535906374626
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.1,-0.005427820198917521
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.01,0.2473548728223669
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.001,0.01992177531642325
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.1,-0.0006184804143307687
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.01,0.06389453792664357
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.001,0.011506978174195881
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.1,0.6124894565186018
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.01,0.6048646481768905
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.001,0.159512879717579
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.1,-0.001369563422565001
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.01,0.5724423054138521
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.001,0.05777120389491175
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.1,0.5943620633783483
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.01,0.3834168417843449
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.001,0.034318232667907345
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.1,0.6736255916193099
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.01,0.6177480924722779
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.001,0.5801148809149852
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.1,-0.008577374111014446
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.01,0.6154747620384773
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.001,0.40008478418669224
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.1,-0.0005990220483076403
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.01,0.6019726197380838
+"[128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.001,0.20022051809846886
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.1,-0.0007857761710281519
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.01,-0.020311546859994367
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.001,-0.0006459680129988765
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.1,-0.013495067103392211
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.01,-4.214792496592956e-05
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.001,-0.00034778864133944154
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.1,-0.02262033905992289
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.01,-0.0005992124298976886
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.001,-0.00014143191892701523
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.1,-0.00734981131226875
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.01,-0.002221201263451933
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.001,-0.0003789960763633804
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.1,-0.0009243551637909686
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.01,-0.0029815087115956374
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.001,7.226601420384782e-06
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.1,-0.0014891855067287185
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.01,-0.00020934560135210667
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.001,-8.530863098665797e-05
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.1,-0.003748760904320747
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.01,-0.0005018156303620014
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.001,-0.0008143004679339594
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.1,-0.0014246083587841074
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.01,-0.00043130369291155546
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.001,-0.00020885929472114206
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.1,-0.001708465470113829
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.01,-2.274065618568244e-05
+"[8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.001,-0.0001283881256703978
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.1,-0.015095999713490071
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.01,-0.011463925439975098
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.001,-8.59890787736628e-05
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.1,-0.0028994044290884258
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.01,-0.01183750057438182
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.001,-0.00012429372623823376
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.1,-0.024835424268776496
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.01,-4.5692679240261214e-07
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.001,-0.0002322292789711522
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.1,-0.007563785603447837
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.01,-0.009046371795287111
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.001,-0.0015832849636796542
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.1,-0.0014371560762274083
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.01,-0.008878263904897876
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.001,-0.000809997687583941
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.1,-0.0037024605759801155
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.01,-0.002381684595538447
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.001,-0.00028550514924807757
+"[32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.1,-0.018832283546713624
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.01,-0.002528783397766965
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.01,-0.005885707153941766
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.001,-0.00019539590028117004
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.1,-0.010452560967708857
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.01,-0.06737410493365892
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.001,-0.020205752511807118
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.1,-7.656458962390644e-07
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.01,-0.05165015841790965
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.001,-0.0008057327468518061
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.001,-0.0005014118325579187
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.1,-0.009452254223769385
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.01,-0.0021527674364316685
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.001,-0.0005658909553318825
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.1,-0.0022087738410589974
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.1,-0.010481855375000126
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.01,-0.0020054847270198906
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.01,1.5540933163693538e-05
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.001,-0.0008755823576633848
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.1,-0.0032839843689833614
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.001,-0.0001961334564601902
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.01,-0.0010092492196704939
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.001,-0.0011547442919037643
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.1,-0.002627861034632417
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.1,-1.0954981258137764e-05
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.01,-0.003432979746987197
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.001,-0.00019130927697608158
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.01,-0.0008226652331568829
+"[128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.001,-0.00011458700018773804
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.1,-0.00014713126227050566
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.01,-0.028314697259224753
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.001,-9.2323896449642e-05
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.1,-0.0011253382755755936
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.01,-0.0005453806418544982
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.001,-6.4798210708261195e-06
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.1,-0.015972335027749418
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.01,-0.0005780496214433661
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.001,-4.680561782399728e-05
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.1,-0.025427470087455495
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.01,-0.008341942424646698
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.001,-0.0001963860985771948
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.1,-0.02090638839401593
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.01,-0.0026468606340903644
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.001,-0.00010987035244158783
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.1,-0.002490438371788972
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.01,-0.0034345804906579236
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.001,-5.8772230251635804e-05
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.1,-0.0002135898834985106
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.1,-0.09747167284863645
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.01,-0.0013127225797975317
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.001,-0.0012233710697207023
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.1,-0.02620582184116471
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.01,-7.741482319323367e-05
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,1000,0.001,-4.098979511368839e-08
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.1,-0.0035824725555713144
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.01,-0.0005523032480649892
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,1000,0.001,-0.00010762673950726054
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.1,-0.0035228599890042567
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.01,-0.02045515996669134
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,50,0.001,-0.0006977144447719574
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.1,-0.040885580368318575
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.01,-0.0002862050831080598
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,50,0.001,-0.0008572805340696377
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.1,-0.0010958616701930435
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.01,-0.0017488935930733973
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,50,0.001,-9.602959409238387e-05
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,1000,0.01,-0.0012203905390761882
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.1,-0.0020280025826895365
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.01,-0.007322194266188964
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",8,200,0.001,-0.008403399221561081
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.1,-0.01563839281135193
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.01,-8.300531581006965e-05
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",16,200,0.001,-0.002330769956584655
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.1,-0.018361170438050856
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.01,-0.002364093831937586
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.001,-7.518162760566938e-06
