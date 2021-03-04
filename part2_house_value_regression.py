@@ -1,10 +1,10 @@
 # import torch
-import lhsmdu
 import pickle
 import numpy as np
 import pandas as pd
 from sklearn import preprocessing, metrics
 from part1_nn_lib import MultiLayerNetwork, Trainer
+from csv import writer
 
 class Regressor():
 
@@ -242,12 +242,14 @@ def train_validate_test_split(x, y, train_percent, validate_percent, seed=None):
     y_val = y.iloc[perm[train_end:validate_end]]
     x_test = x.iloc[perm[validate_end:]]
     y_test = y.iloc[perm[validate_end:]]
+
     x_train = x_train.reset_index(drop=True)
     y_train = y_train.reset_index(drop=True)
     x_val = x_val.reset_index(drop=True)
     y_val = y_val.reset_index(drop=True)
     x_test = x_test.reset_index(drop=True)
     y_test = y_test.reset_index(drop=True)
+
     return x_train, x_val, x_test, y_train, y_val, y_test
 
 
@@ -272,7 +274,7 @@ def RegressorHyperParameterSearch(x, y):
 
     x_train, x_val, x_test, y_train, y_val, y_test = train_validate_test_split(x, y, 0.6, 0.2, 12)
 
-    numLayers = [4, 8]
+    numLayers = [8]
     neurons = [8, 32, 128]
     activations = ["relu"]
     epochs = [50, 200, 1000]
@@ -298,6 +300,7 @@ def RegressorHyperParameterSearch(x, y):
                             model = Regressor(x, epoch, neurons=neuronsToTest, activations = activationsToTest, batchSize=batchSize, learningRate=learningRate)
                             model.fit(x_train, y_train)
                             model_error = model.score(x_val, y_val)
+                            add_to_csv([neuronsToTest, activationsToTest, batchSize, epoch, learningRate, model_error])
                             print(neuronsToTest, "\t", activationsToTest, "\t", batchSize, "\t", epoch, "\t", learningRate, "\t\tR2 score =", model_error)
 
 
@@ -333,7 +336,11 @@ def RegressorHyperParameterSearch(x, y):
     #                       ** END OF YOUR CODE **
     #######################################################################
 
-
+def add_to_csv(row):
+    with open("neural_networks.csv", 'a+', newline='') as write_obj:
+        csv_writer = writer(write_obj)
+        # Add contents of list as last row in the csv file
+        csv_writer.writerow(row)
 
 def example_main():
 
