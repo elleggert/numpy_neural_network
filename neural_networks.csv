@@ -552,3 +552,5 @@ Neurons,Activations,Batch Size, Epochs, Learning Rate, R2 Error
 "[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.1,-0.018361170438050856
 "[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.01,-0.002364093831937586
 "[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'sigmoid', 'identity']",32,200,0.001,-7.518162760566938e-06
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,2000,0.1,0.71095363884166
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,2000,0.01,0.7281894792870849
