@@ -274,7 +274,7 @@ def RegressorHyperParameterSearch(x, y):
 
     x_train, x_val, x_test, y_train, y_val, y_test = train_validate_test_split(x, y, 0.6, 0.2, 12)
 
-    numLayers = [8]
+    numLayers = [4, 8, 16]
     neurons = [8, 32, 128]
     activations = ["relu"]
     epochs = [50, 200, 1000]

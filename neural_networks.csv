@@ -1,4 +1,4 @@
-Neurons,Activations,Batch Size, Epochs, Learning Rate
+Neurons,Activations,Batch Size, Epochs, Learning Rate, R2 Error
 "[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,50,0.1,0.666626793101464
 "[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,50,0.01,0.6372180085178198
 "[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,50,0.001,0.3314803708350216
@@ -15,3 +15,186 @@ Neurons,Activations,Batch Size, Epochs, Learning Rate
 "[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,200,0.1,0.6945227023328517
 "[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,200,0.01,0.6263740081055419
 "[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,200,0.001,0.2836751033109868
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,1000,0.1,0.7327367552534978
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,1000,0.01,0.7233589409520511
+"[16, 32, 128, 32, 1]","['relu', 'relu', 'relu', 'relu', 'identity']",32,100,0.01,0.6755275168338244
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,50,0.1,-0.0440291568736173
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,50,0.01,0.38687237700876276
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,50,0.001,0.18124673360869425
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,50,0.1,-0.0008925043794834053
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,50,0.01,0.4163238732586724
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,50,0.001,-4.048133385570196e-05
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,50,0.1,-0.0009888291671091842
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,50,0.01,0.447152326244312
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,50,0.001,-2.2840990276939976e-05
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,1000,0.001,0.685032637158961
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,200,0.1,0.7043357752769503
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,1000,0.1,0.7231822040368798
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,200,0.01,-0.002811700666162986
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,200,0.001,0.2446629070593318
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,1000,0.01,0.716252833776919
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,200,0.1,0.6821231255797529
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,200,0.01,0.617242406505529
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,1000,0.001,0.6617239734943094
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,200,0.001,0.00023071557043818913
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,200,0.1,-2.0634030195587627e-07
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,200,0.01,-1.3073400157326276e-05
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,1000,0.1,0.7063169266131999
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,200,0.001,0.004411254186320934
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,1000,0.01,0.6955822553593284
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,1000,0.001,0.6295660169445745
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,50,0.1,0.5265616409788971
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,50,0.01,0.6521433576947738
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,50,0.001,0.6212127697421019
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,50,0.1,0.6769402799375581
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,50,0.01,0.6613139852038594
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,50,0.001,0.5668610539448254
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,50,0.1,0.6605032563572175
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,50,0.01,0.6470747289175138
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,50,0.001,0.40624868466889763
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,200,0.1,0.6906376877298734
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,200,0.01,0.714030244718338
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,200,0.001,0.6498396425246691
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,200,0.1,0.7042466834232605
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,1000,0.1,0.7397347458370342
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,200,0.01,0.7023073081834252
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,200,0.001,0.6319503808700057
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,200,0.1,0.7101160804369449
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,200,0.01,0.6819922364724897
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,200,0.001,0.6126007778459577
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,1000,0.1,0.7274331329790209
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,1000,0.01,0.7057783401607212
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,1000,0.01,0.7589996990140041
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,1000,0.001,-4.01927451454398e-06
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,1000,0.001,0.7286869846204956
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,1000,0.1,-0.031984964093842994
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,1000,0.1,0.7369680646062817
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,1000,0.01,0.7105105959439705
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,1000,0.01,0.749283217246352
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,1000,0.001,0.32907538083794274
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,1000,0.001,0.6886166715848452
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,1000,0.1,0.7388829430497437
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,1000,0.1,-0.0013285267120204391
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,1000,0.01,0.7260748718134536
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,1000,0.01,0.6813016519937327
+"[32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,1000,0.001,0.6690195319005834
+"[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,50,0.1,0.6913289326979141
+"[8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,1000,0.001,-0.0005527821726813986
+"[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,50,0.01,0.6900536347972448
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,50,0.1,0.6726584372669093
+"[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,50,0.001,0.635796159071653
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,50,0.01,0.626981511194391
+"[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,50,0.1,0.6918207979141415
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,50,0.001,0.04266078468262102
+"[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,50,0.01,0.6631030974552286
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,50,0.1,0.6720566911483266
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,50,0.01,0.6280715593175876
+"[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,50,0.001,0.5715838844244561
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,50,0.001,0.016102905450389948
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,50,0.1,0.6587720039948464
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,50,0.01,-0.0016166089351346002
+"[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,50,0.1,0.6543507813519422
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,50,0.001,0.009447880927621943
+"[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,50,0.01,0.6194653942400311
+"[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,50,0.001,0.435634797454564
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,200,0.1,0.7297609191821524
+"[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,200,0.1,0.7222130736788337
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,200,0.01,0.6953450803541888
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,200,0.001,0.6437225664960806
+"[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,200,0.01,0.728544070409088
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,200,0.1,0.7185086555302381
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,200,0.01,0.6748353535901144
+"[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,200,0.001,0.6790055217264275
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,200,0.001,0.6130578571562271
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,200,0.1,0.6719866265909579
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,200,0.01,0.607632681465242
+"[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,200,0.1,0.7327684447237448
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,200,0.001,0.37160444221143296
+"[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,200,0.01,0.7170665629395714
+"[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,200,0.001,0.6468163726892334
+"[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,200,0.1,0.7233543050553733
+"[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,200,0.01,0.6992189341988723
+"[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,200,0.001,0.6426359295844906
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,1000,0.1,0.7564959669707969
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,1000,0.01,0.7620054448722122
+"[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,1000,0.1,0.7044760558543013
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,1000,0.001,0.7247247907618636
+"[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,1000,0.01,0.7685486578391756
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,1000,0.1,0.7475302674568403
+"[16, 32, 128, 32, 1]","['relu', 'relu', 'relu', 'relu', 'identity']",32,100,0.01,0.6755275168338244
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",8,50,0.1,0.684625375530618
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",8,50,0.01,0.6398460135667114
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",8,50,0.001,0.5954423643602849
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",16,50,0.1,0.6733170273850297
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",16,50,0.01,0.6233069796981043
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",16,50,0.001,0.489863148599762
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",32,50,0.1,0.66039494520086
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",32,50,0.01,0.49205942331823194
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",32,50,0.001,0.24424795293958879
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",8,200,0.1,0.7116565835391107
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",8,200,0.01,0.6755877989298309
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",8,200,0.001,0.6285675265548767
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",16,200,0.1,0.7026184246461347
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",16,200,0.01,0.6622142057144748
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",16,200,0.001,0.5568523643288172
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",32,200,0.1,0.6872576812244899
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",32,200,0.01,0.653979952660253
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",32,200,0.001,0.3372698522837879
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,1000,0.01,0.7494841586835121
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",8,1000,0.1,0.7232251318265734
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",8,1000,0.01,0.714581150885944
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",8,1000,0.001,0.6698205909592203
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,1000,0.001,0.6718714589107909
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",16,1000,0.1,0.7329031519375495
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",16,1000,0.001,0.64536023854014
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",32,1000,0.1,0.7149800296331659
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,1000,0.1,0.750129372614929
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",32,1000,0.01,0.7079232512245569
+"[8, 8, 8, 1]","['relu', 'relu', 'relu', 'identity']",32,1000,0.001,0.6051848018920543
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",8,50,0.1,0.6785532304063469
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",8,50,0.01,0.6600123797153834
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",8,50,0.001,0.5978895351879046
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",16,50,0.1,0.6653685684909654
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",16,50,0.01,0.6559784070818062
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",16,50,0.001,0.5030053824517844
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",32,50,0.1,0.6513830506889887
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",32,50,0.01,0.609673618687524
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",32,50,0.001,0.37625689599478795
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",8,200,0.1,0.7118631072880298
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",8,200,0.01,0.697276917229731
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,1000,0.01,0.6490320433041143
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",8,200,0.001,0.6443548726414854
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",16,200,0.1,0.724249125812607
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",16,200,0.01,0.6745937089487544
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",16,200,0.001,0.6230579029457857
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",32,200,0.1,0.7181925869427349
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",32,200,0.01,0.6640176503525026
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",32,200,0.001,0.6081496929284262
+"[32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,1000,0.001,0.6569568002114423
+"[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,1000,0.1,0.7520054785282111
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",8,1000,0.1,0.7527510777904054
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,50,0.1,0.6941527919578301
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,50,0.01,0.6347922616514823
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",8,1000,0.01,0.7408957009727977
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,50,0.001,0.5592516522990998
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,50,0.1,0.6814076959598354
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",8,1000,0.001,0.6895701185352403
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,50,0.01,0.6600662298560767
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,50,0.001,0.0217368206240095
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",16,1000,0.1,0.7534597155871177
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",16,1000,0.01,0.7160218985286475
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,50,0.1,0.628312942189116
+"[128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,1000,0.01,0.7672812045688759
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",16,1000,0.001,0.6559092073614718
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,50,0.01,0.6271373004583092
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",32,1000,0.1,0.756448198327784
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",32,1000,0.01,0.7150824333437833
+"[128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 128, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,50,0.001,0.0147688600178294
+"[32, 32, 32, 1]","['relu', 'relu', 'relu', 'identity']",32,1000,0.001,0.6392864254000629
+"[128, 128, 128, 1]","['relu', 'relu', 'relu', 'identity']",8,50,0.1,0.7023730595122855
+"[128, 128, 128, 1]","['relu', 'relu', 'relu', 'identity']",8,50,0.01,0.6704000967541497
+"[128, 128, 128, 1]","['relu', 'relu', 'relu', 'identity']",8,50,0.001,0.615445304864426
+"[128, 128, 128, 1]","['relu', 'relu', 'relu', 'identity']",16,50,0.1,0.6990644719325327
+"[128, 128, 128, 1]","['relu', 'relu', 'relu', 'identity']",16,50,0.01,0.6531328006730326
+"[128, 128, 128, 1]","['relu', 'relu', 'relu', 'identity']",16,50,0.001,0.6043735255270756
+"[128, 128, 128, 1]","['relu', 'relu', 'relu', 'identity']",32,50,0.1,0.6865135649913201
