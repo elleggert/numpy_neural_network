@@ -1,0 +1,17 @@
+Neurons,Activations,Batch Size, Epochs, Learning Rate
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,50,0.1,0.666626793101464
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,50,0.01,0.6372180085178198
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,50,0.001,0.3314803708350216
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,50,0.1,0.4000212574900037
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,50,0.01,0.6050904020718508
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,50,0.001,0.31351948196689683
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,50,0.1,0.659958672557518
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,50,0.01,0.6231105453811889
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,200,0.01,0.6805723575929581
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",8,200,0.001,0.6054867014604738
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,200,0.1,-0.002498516154953112
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,200,0.01,0.6510555808299152
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",16,200,0.001,0.5186953735749915
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,200,0.1,0.6945227023328517
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,200,0.01,0.6263740081055419
+"[8, 8, 8, 8, 8, 8, 8, 1]","['relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'relu', 'identity']",32,200,0.001,0.2836751033109868

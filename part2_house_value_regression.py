@@ -361,30 +361,24 @@ def example_main():
     # This example trains on the whole available dataset. 
     # You probably want to separate some held-out data 
     # to make sure the model isn't overfitting
-    #epochs = 1000
-    #neurons = [16, 32, 128, 32, 1]
-    #activations = ["relu", "relu", "relu", "relu","identity"]
-    #batchSize = 32
-    #learningRate = 0.01
-    regressor = Regressor(x_train)
+
+    
+    epochs = 100
+    neurons = [16, 32, 128, 32, 1]
+    activations = ["relu", "relu", "relu", "relu","identity"]
+    batchSize = 32
+    learningRate = 0.01
+    regressor = Regressor(x_train, epochs, neurons, activations, batchSize, learningRate)
     regressor.fit(x_train, y_train)
     #save_regressor(regressor)
-
 
     # Error
     error = regressor.score(x_test, y_test)
     print("\nRegressor error: {}\n".format(error))
 
+    add_to_csv([neurons, activations, batchSize, epochs, learningRate, error])
+
     results = RegressorHyperParameterSearch(x_train, y_train)
-
-
-    # df = pd.DataFrame()
-    # data = pd.read_csv('neural_network_optimisation.csv')
-    # data.loc[len(df)] = [neurons, activations, batchSize, epochs, learningRate, error]
-    # print(data)
-    # data.to_csv('neural_network_optimisation.csv')
-
-    # df.columns = ['Number of Neurons', 'Activation Functions', 'Batch Size', 'Epochs', 'Learning Rate', 'R2 Score']
 
 
 if __name__ == "__main__":
