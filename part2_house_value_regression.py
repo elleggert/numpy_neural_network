@@ -272,7 +272,7 @@ def RegressorHyperParameterSearch(x, y):
     #######################################################################
 
 
-    x_train, x_val, x_test, y_train, y_val, y_test = train_validate_test_split(x, y, 0.6, 0.2, 12)
+    x_train, x_val, _, y_train, y_val, _ = train_validate_test_split(x, y, 0.6, 0.2, 12)
 
     numLayers = [4,8,16]
     neurons = [8,32,128]
@@ -316,9 +316,7 @@ def RegressorHyperParameterSearch(x, y):
 
 
     return best_hyperparameters
-    # #############################################################################
-   
-    ################################################################################
+
     #######################################################################
     #                       ** END OF YOUR CODE **
     #######################################################################
@@ -341,31 +339,18 @@ def example_main():
     # Spliting input and output
     x_train = data.loc[:, data.columns != output_label]
     y_train = data.loc[:, [output_label]]
-    
-    x_train, x_val, x_test, y_train, y_val, y_test = train_validate_test_split(x_train, y_train, 0.6, 0.2, 12)
 
     # Training
-    # This example trains on the whole available dataset.
+    # This example trains on the whole available dataset. 
     # You probably want to separate some held-out data 
     # to make sure the model isn't overfitting
-
-    results = RegressorHyperParameterSearch(x_train, y_train)
-
-    epochs = 1000
-    neurons = [128, 128, 128, 128, 128, 128, 128, 128, 1]
-    activations = ["relu", "relu", "relu", "relu","relu", "relu", "relu", "relu", "identity"]
-    batchSize = 16
-    learningRate = 0.01
-    regressor = Regressor(x_train, epochs, neurons, activations, batchSize, learningRate)
+    regressor = Regressor(x_train, nb_epoch = 10)
     regressor.fit(x_train, y_train)
     save_regressor(regressor)
+
     # Error
-    error = regressor.score(x_test, y_test)
+    error = regressor.score(x_train, y_train)
     print("\nRegressor error: {}\n".format(error))
-
-    add_to_csv([neurons, activations, batchSize, epochs, learningRate, error])
-    exit()
-
 
 
 if __name__ == "__main__":

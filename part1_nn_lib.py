@@ -549,7 +549,7 @@ class Trainer(object):
         #######################################################################
         
 
-        for epoch in range(self.nb_epoch):
+        for _ in range(self.nb_epoch):
 
             loss_per_epoch = 0
   
