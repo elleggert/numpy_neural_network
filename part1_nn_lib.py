@@ -577,8 +577,8 @@ class Trainer(object):
 
                 self.network.update_params(self.learning_rate)
 
-            if epoch % 10 == 0:
-                print("Epoch:", epoch, "Loss:", loss_per_epoch)  
+            #if epoch % 10 == 0:
+                #print("Epoch:", epoch, "Loss:", loss_per_epoch)  
         #######################################################################
         #                       ** END OF YOUR CODE **
         #######################################################################

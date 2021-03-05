@@ -274,13 +274,15 @@ def RegressorHyperParameterSearch(x, y):
 
     x_train, x_val, x_test, y_train, y_val, y_test = train_validate_test_split(x, y, 0.6, 0.2, 12)
 
-    numLayers = [7]
-    neurons = [8]
-    activations = ["relu"]
-    epochs = [500, 1500]
-    batchSizes = [8]
-    learningRates = [0.1]
+    numLayers = [4,8,16]
+    neurons = [8,32,128]
+    activations = ["relu", "sigmoid"]
+    epochs = [50, 200, 200, 1000]
+    batchSizes = [8, 32, 128]
+    learningRates = [0.1, 0.01, 0.001]
     
+    best_error = 0
+    best_hyperparameters = []
 
     for numLayer in numLayers:
         for neuron in neurons:
@@ -292,7 +294,7 @@ def RegressorHyperParameterSearch(x, y):
             for activation in activations:
                 for _ in range(numLayer - 1):
                     activationsToTest.append(activation)
-                activationsToTest.append("identity") # last activation value is identrity
+                activationsToTest.append("identity") # last activation value is identity
 
                 for epoch in epochs:
                     for batchSize in batchSizes:
@@ -300,37 +302,22 @@ def RegressorHyperParameterSearch(x, y):
                             model = Regressor(x, epoch, neurons=neuronsToTest, activations = activationsToTest, batchSize=batchSize, learningRate=learningRate)
                             model.fit(x_train, y_train)
                             model_error = model.score(x_val, y_val)
+                            if model_error > best_error:
+                                best_hyperparameters.clear()
+                                best_hyperparameters.append(epoch)
+                                best_hyperparameters.append(neuronsToTest)
+                                best_hyperparameters.append(activationsToTest)
+                                best_hyperparameters.append(batchSize)
+                                best_hyperparameters.append(learningRate)
+                                best_error = model_error
+
                             add_to_csv([neuronsToTest, activationsToTest, batchSize, epoch, learningRate, model_error])
                             print(neuronsToTest, "\t", activationsToTest, "\t", batchSize, "\t", epoch, "\t", learningRate, "\t\tR2 score =", model_error)
 
 
-    return # Return the chosen hyper parameters
+    return best_hyperparameters
     # #############################################################################
-    # params = {'choice': hp.choice('num_layers',
-    #     [ {'layers':'two', },
-    #     {'layers':'three', 'neuron3': hp.choice('neuron3', [16,32,64,128,256]),
-    #      'activation3':hp.choice('activation3',['sigmoid','relu'])},
-    #      {'layers':'four','neuron4': hp.choice('neuron4', [16,32,64,128,256]),
-    #      'activation4':hp.choice('activation5',['sigmoid','relu']),
-    #      'neuron5': hp.choice('neuron5', [16,32,64,128,256]),
-    #     'activation5':hp.choice('activation4',['sigmoid','relu'])}]),
-    #     'neuron1': hp.choice('neuron1', [16,32,64,128,256]),
-    #     'neuron2': hp.choice('neuron2', [16,32,64,128,256]),
-    #     'activation1':hp.choice('activation1',['sigmoid','relu']),
-    #     'activation2':hp.choice('activation2',['sigmoid','relu']),
-    #     'lr':hp.uniform('lr',1e-4,1e-1),
-    #     'batch_size':hp.choice('batch_size',[8,16,32])}
-    # grid = GridSearchCV(model, params)
-    # start = time.time()
-    # grid.fit(trainData, trainLabels)
-
-    # # evaluate the best grid searched model on the testing data
-    # print("[INFO] grid search took {:.2f} seconds".format(
-    #     time.time() - start))
-    # acc = grid.score(testData, testLabels)
-    # print("[INFO] grid search accuracy: {:.2f}%".format(acc * 100))
-    # print("[INFO] grid search best parameters: {}".format(
-	# grid.best_params_))
+   
     ################################################################################
     #######################################################################
     #                       ** END OF YOUR CODE **
@@ -358,11 +345,12 @@ def example_main():
     x_train, x_val, x_test, y_train, y_val, y_test = train_validate_test_split(x_train, y_train, 0.6, 0.2, 12)
 
     # Training
-    # This example trains on the whole available dataset. ç
+    # This example trains on the whole available dataset.
     # You probably want to separate some held-out data 
     # to make sure the model isn't overfitting
 
-    
+    results = RegressorHyperParameterSearch(x_train, y_train)
+
     epochs = 1000
     neurons = [128, 128, 128, 128, 128, 128, 128, 128, 1]
     activations = ["relu", "relu", "relu", "relu","relu", "relu", "relu", "relu", "identity"]
@@ -378,7 +366,6 @@ def example_main():
     add_to_csv([neurons, activations, batchSize, epochs, learningRate, error])
     exit()
 
-    #results = RegressorHyperParameterSearch(x_train, y_train)
 
 
 if __name__ == "__main__":
