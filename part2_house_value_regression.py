@@ -8,7 +8,7 @@ from csv import writer
 
 class Regressor():
 
-    def __init__(self, x, nb_epoch = 100, neurons = [16, 16, 16, 1], activations = ["relu", "relu", "relu", "identity"], batchSize = 32, learningRate = 0.01):
+    def __init__(self, x, nb_epoch = 100, neurons = [16, 16, 16, 1], activations = ["relu", "relu", "relu", "identity"], batchSize = 8, learningRate = 0.01):
         # You can add any input parameters you need
         # Remember to set them with a default value for LabTS tests
         """ 
